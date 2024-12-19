@@ -723,17 +723,17 @@ $ git commit -m &#34;hello world&#34;
 <h1 id="一、Commit-message-的作用"><a href="#一、Commit-message-的作用" class="headerlink" title="一、Commit message 的作用"></a>一、Commit message 的作用</h1><p>格式化的Commit message，有几个好处。</p>
 <p><strong>（1）提供更多的历史信息，方便快速浏览。</strong></p>
 <p>比如，下面的命令显示上次发布后的变动，每个commit占据一行。你只看行首，就知道某次 commit 的目的。</p>
-<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">git</span> log <span class="token operator">&lt;</span>last tag<span class="token operator">&gt;</span> HEAD --pretty<span class="token operator">=</span>format:%s<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">git</span> log <span class="token operator">&lt;</span>last tag<span class="token operator">></span> HEAD --pretty<span class="token operator">=</span>format:%s<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><strong>（2）可以过滤某些commit（比如文档改动），便于快速查找信息。</strong></p>
 <p>比如。</p>
-<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">git</span> log <span class="token operator">&lt;</span>last release<span class="token operator">&gt;</span> HEAD --grep feature<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">git</span> log <span class="token operator">&lt;</span>last release<span class="token operator">></span> HEAD --grep feature<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><strong>（3）可以直接从commit生成Change log。</strong></p>
 <h1 id="二、Commit-message-的格式"><a href="#二、Commit-message-的格式" class="headerlink" title="二、Commit message 的格式"></a>二、Commit message 的格式</h1><p>每次提交，Commit message 都包括三个部分：Header，Body 和 Footer。</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token operator">&lt;</span>type<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>scope<span class="token operator">&gt;</span><span class="token punctuation">)</span>: <span class="token operator">&lt;</span>subject<span class="token operator">&gt;</span>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token operator">&lt;</span>type<span class="token operator">></span><span class="token punctuation">(</span><span class="token operator">&lt;</span>scope<span class="token operator">></span><span class="token punctuation">)</span>: <span class="token operator">&lt;</span>subject<span class="token operator">></span>
 
-<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>body<span class="token operator">></span>
 
-<span class="token operator">&lt;</span>footer<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token operator">&lt;</span>footer<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>其中，Header 是必需的，Body 和 Footer 可以省略。</p>
 <p>不管是哪一个部分，任何一行都不得超过72个字符（或100个字符）。这是为了避免自动换行影响美观。</p>
 <h2 id="2-1-Header"><a href="#2-1-Header" class="headerlink" title="2.1 Header"></a>2.1 Header</h2><p>Header部分只有一行，包括三个字段：<code>type</code>（必需）、<code>scope</code>（可选）和<code>subject</code>（必需）。</p>
@@ -1586,7 +1586,7 @@ This reverts commit 667ecc1654a317a13331b17617d973392f415f02.<span aria-hidden="
 
             
                 &nbsp; | &nbsp;字数统计:&nbsp;
-                <span class="white-color">11.3k</span> 字
+                <span class="white-color">11.2k</span> 字
             
 
             
@@ -1763,5 +1763,5 @@ $(function () {
             </script>
         
 
-    <script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+    <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":false},"react":{"opacity":0.7}});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
 </html>

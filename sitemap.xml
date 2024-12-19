@@ -16,13 +16,6 @@
   </url>
   
   <url>
-    <loc>https://www.gyl0730.top/galleries/index.html</loc>
-    
-    <lastmod>2024-12-19T06:20:34.035Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.gyl0730.top/contact/index.html</loc>
     
     <lastmod>2024-12-19T06:20:34.035Z</lastmod>
@@ -30,7 +23,7 @@
   </url>
   
   <url>
-    <loc>https://www.gyl0730.top/galleries/%E5%9B%9E%E5%BF%86%E5%BD%95-No.1/index.html</loc>
+    <loc>https://www.gyl0730.top/galleries/index.html</loc>
     
     <lastmod>2024-12-19T06:20:34.035Z</lastmod>
     
@@ -44,7 +37,14 @@
   </url>
   
   <url>
-    <loc>https://www.gyl0730.top/archives/index.html</loc>
+    <loc>https://www.gyl0730.top/galleries/%E5%9B%9E%E5%BF%86%E5%BD%95-No.1/index.html</loc>
+    
+    <lastmod>2024-12-19T06:20:34.035Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.gyl0730.top/about/index.html</loc>
     
     <lastmod>2024-12-19T06:20:34.034Z</lastmod>
     
@@ -58,7 +58,7 @@
   </url>
   
   <url>
-    <loc>https://www.gyl0730.top/about/index.html</loc>
+    <loc>https://www.gyl0730.top/archives/index.html</loc>
     
     <lastmod>2024-12-19T06:20:34.034Z</lastmod>
     
@@ -135,6 +135,13 @@
   </url>
   
   <url>
+    <loc>https://www.gyl0730.top/developbloglog.html</loc>
+    
+    <lastmod>2022-10-13T10:35:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.gyl0730.top/developskill.html</loc>
     
     <lastmod>2022-10-13T10:35:00.000Z</lastmod>
@@ -143,13 +150,6 @@
   
   <url>
     <loc>https://www.gyl0730.top/mysqldataloss.html</loc>
-    
-    <lastmod>2022-10-13T10:35:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.gyl0730.top/developbloglog.html</loc>
     
     <lastmod>2022-10-13T10:35:00.000Z</lastmod>
     
