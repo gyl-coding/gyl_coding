@@ -31,33 +31,6 @@
     
     
     <entry>
-      <title>Windows设置</title>
-      <link href="/windowssetting.html"/>
-      <url>/windowssetting.html</url>
-      
-        <content type="html"><![CDATA[<div align="center"><h1>Windows设置</h1></div><div align="middle">    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="86" src="//music.163.com/outchain/player?type=2&amp;id=1814116265&amp;auto=0&amp;height=66">    </iframe></div>计算机\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\StuckRects3<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="C:%5CUsers%5C10258%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230106142327697.png" alt=""></p><p>然后把FE下面的数值进行修改：</p><p>　　01任务栏置顶（在上）。</p><p>　　02任务栏在右。</p><p>　　03任务栏在下。</p><p>​       04任务栏在左。</p><p>Ctrl+Shift+Esc打开任务管理器，重启Windows资源管理器</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      <categories>
-          
-          <category> 系统 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 注册表 </tag>
-            
-            <tag> windows </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>香港迪士尼出行游玩攻略</title>
       <link href="/hongkong.html"/>
       <url>/hongkong.html</url>
@@ -79,6 +52,33 @@
             <tag> 香港 </tag>
             
             <tag> 迪士尼 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Windows设置</title>
+      <link href="/windowssetting.html"/>
+      <url>/windowssetting.html</url>
+      
+        <content type="html"><![CDATA[<div align="center"><h1>Windows设置</h1></div><div align="middle">    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="86" src="//music.163.com/outchain/player?type=2&amp;id=1814116265&amp;auto=0&amp;height=66">    </iframe></div>计算机\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\StuckRects3<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="C:%5CUsers%5C10258%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230106142327697.png" alt=""></p><p>然后把FE下面的数值进行修改：</p><p>　　01任务栏置顶（在上）。</p><p>　　02任务栏在右。</p><p>　　03任务栏在下。</p><p>​       04任务栏在左。</p><p>Ctrl+Shift+Esc打开任务管理器，重启Windows资源管理器</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 系统 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 注册表 </tag>
+            
+            <tag> windows </tag>
             
         </tags>
       
