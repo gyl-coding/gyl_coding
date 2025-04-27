@@ -164,35 +164,6 @@
     
     
     <entry>
-      <title>VirtualBox安装MacOS</title>
-      <link href="/virtualboxinstallmacos.html"/>
-      <url>/virtualboxinstallmacos.html</url>
-      
-        <content type="html"><![CDATA[<div align="center"><h1>VirtualBox安装MacOS</h1></div><blockquote><p>基于Windows上的VirtualBox安装MacOS</p></blockquote><div align="middle">    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="86" src="//music.163.com/outchain/player?type=2&amp;id=569212211&amp;auto=0&amp;height=66">    </iframe></div><h1 id="提前准备"><a href="#提前准备" class="headerlink" title="提前准备"></a>提前准备</h1><p>下载如下软件</p><ul><li><a href="https://git-scm.com/" target="_blank" rel="noopener">安装Git</a></li><li><a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="noopener">VirtualBox</a></li><li><a href="https://gitee.com/gyl_coding/macos_virtualbox" target="_blank" rel="noopener">克隆macos_virtualbox项目</a></li><li>将macos_virtualbox项目下的<code>dmg2img.exe</code>和<code>wget.exe</code>移动到Git安装目录的<code>~\Git\mingw64\bin</code>下面.</li></ul><h1 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h1><ol><li>进入macos_virtualbox项目目录下,右键进入 <code>Git Bash Here</code>.</li><li>执行<code>./macos-guest-virtualbox.sh</code>开始安装,其中会自动下载macos镜像和创建虚拟机,等待即可,大概一个小时.</li><li>如果virtualbox最后一行日志卡在<code>EB|#LOG:EXITBS:START</code>,则按如下操作,否则忽视该步骤<ul><li>将macos虚拟机关机</li><li>进入virtualbox安装目录打开CMD</li><li>在CMD中执行如下代码<code>VBoxManage modifyvm "macOS" --cpu-profile "Intel Core i7-6700K"</code></li></ul></li><li>正常情况下会自动初始化MacOS系统,如果VirtualBox卡在语言选择界面,则按 <code>Git Bash Here</code>中的日志操作即可.</li></ol><p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="/medias/images/29a740c2537207aaa2125021b9afea4.jpg" alt=""></p><h1 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h1><h2 id="苹果系统设置"><a href="#苹果系统设置" class="headerlink" title="苹果系统设置"></a>苹果系统设置</h2><p>   1、系统左上角苹果图标→系统偏好设置→辅助功能→显示，勾选“减弱动态效果”“减少透明度”和“无需用颜色区分”</p><p>   2、依旧是在系统偏好设置→程序坞，最小化窗口时使用“缩放效果”，取消勾选“弹跳打开应用程序”。</p><p>   3、依旧是在系统偏好设置→扩展，挨个点击左侧目录，将不需要的扩展全部去掉勾选。</p><p>   4、依旧是在系统偏好设置→用户与群组→登录项，选择用户，左下角开锁后，去掉不需要的登录项。</p><p>   5、VMware Tools的安装可以让虚拟机分辨率自适应，文件和剪贴板也可以直接与母鸡共享，属于使用必装，但安装后需要重新设置分辨率，否则画面会一直处于一个比较大的状态，影响体验，同时会有卡顿。<br>      VMware Tools的安装教程：<a href="https://www.dhzy.fun/archives/4366.html" target="_blank" rel="noopener">https://www.dhzy.fun/archives/4366.html</a></p><p>   依旧是在系统偏好设置→显示器→缩放，分辨率选择带有(HiDPI)的选项，然后勾选好，画面中的窗口会放大或者缩小。</p><p>   设置成功后拖动虚拟机窗口边界，虚拟机画面会根据虚拟机窗口大小进行自适应，但不会小于设置分辨率。系统提示“系统偏好设置”正在尝试解锁“安全性与隐私”偏好设置时，输入密码，解锁，将vmware-tools-daemon打钩即可。</p><h2 id="优化神器-beamoff"><a href="#优化神器-beamoff" class="headerlink" title="优化神器 beamoff"></a>优化神器 beamoff</h2><p>进入MacOS中Safari打开 <a href="http://files.cnblogs.com/files/yipu/beamoff.zip" target="_blank" rel="noopener">http://files.cnblogs.com/files/yipu/beamoff.zip</a><br>mac会自动解压,得到 beamoff.app<br>然后在: 系统偏好设置 - 用户与群组 - 选中你自己的用户名 - 选择 “登录项” 选项卡 - 点 + 号 找到你下载的beamoff.app</p><h1 id="参考链接："><a href="#参考链接：" class="headerlink" title="参考链接："></a>参考链接：</h1><p>AMD芯片无法启动: <a href="https://www.jianshu.com/p/c6c9aab4c715" target="_blank" rel="noopener">https://www.jianshu.com/p/c6c9aab4c715</a></p><p>MacOS设置优化: <a href="https://www.dhzy.fun/archives/4321.html" target="_blank" rel="noopener">https://www.dhzy.fun/archives/4321.html</a></p><p>MacOS优化: <a href="https://blog.csdn.net/whitehack/article/details/47074403" target="_blank" rel="noopener">https://blog.csdn.net/whitehack/article/details/47074403</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      <categories>
-          
-          <category> 操作系统 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> VirtualBox </tag>
-            
-            <tag> MacOS </tag>
-            
-            <tag> 虚拟机 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Docker运行Redis容器</title>
       <link href="/runredisondocker.html"/>
       <url>/runredisondocker.html</url>
@@ -222,33 +193,6 @@
     
     
     <entry>
-      <title>Mysql丢失数据的场景</title>
-      <link href="/mysqldataloss.html"/>
-      <url>/mysqldataloss.html</url>
-      
-        <content type="html"><![CDATA[<div align="center"><h1>Mysql丢失数据的场景</h1></div><div align="middle">    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="86" src="//music.163.com/outchain/player?type=2&amp;id=1397282233&amp;auto=0&amp;height=66">    </iframe></div><h1 id="引擎层数据丢失场景"><a href="#引擎层数据丢失场景" class="headerlink" title="引擎层数据丢失场景"></a>引擎层数据丢失场景</h1><h2 id="InnoDB丢失数据场景分析-写redo-log失败"><a href="#InnoDB丢失数据场景分析-写redo-log失败" class="headerlink" title="InnoDB丢失数据场景分析/写redo log失败"></a>InnoDB丢失数据场景分析/写redo log失败</h2><p>事务提交时需要写redo log、undo log。数据页的变更会首先在内存中完成，同时将事务操作顺序再记录到redo log中。但如果MySQl 事务提交时，被更改的数据页还保存在内存中（称为脏页），未来得及flush到磁盘上系统正好宕机了,就会丢失该事务的数据。</p><p>配置的参数 <code>innodb_flush_log_at_trx_commit</code></p><p>0 ：每秒 <code>write os cache</code> &amp; <code>flush disk</code></p><p>1 ：每次commit都 <code>write os cache</code> &amp; <code>flush disk</code></p><p>2 ：每次commit都 <code>write os cache</code>&amp; <code>write file cache</code>（然后根据<code>innodb_flush_log_at_timeout</code>参数，默认为1s  flush disk）</p><p><code>innodb_flush_log_at_trx_commit=1</code>最为安全，因为每次commit都保证redo log写入了disk。但是这种方式性能对DML性能来说比较低，如果设置为2，DML性能要比设置为1高很多。</p><h2 id="MyISAM丢失数据场景分析"><a href="#MyISAM丢失数据场景分析" class="headerlink" title="MyISAM丢失数据场景分析"></a>MyISAM丢失数据场景分析</h2><p>由于MyISAM不支持事务，所以在生产环境中基本没有使用，且MyISAM没有data cache，所有DML操作只写到OS cache中，flush disk操作均由OS来完成，因此如果服务器宕机，这部分数据肯定会丢失。</p><h1 id="主从复制导致数据不一致的场景"><a href="#主从复制导致数据不一致的场景" class="headerlink" title="主从复制导致数据不一致的场景"></a>主从复制导致数据不一致的场景</h1><p>MySQL主从复制原理：MySQL主库在事务提交时写binlog，并通过<code>sync_binlog</code>参数来控制binlog刷新到磁盘“落地”。从库中有两个线程： IO线程负责从主库读取<code>binlog</code>，并记录到本地的<code>relay log</code>中；SQL线程再将<code>relay log</code>中的记录应用到从库。如下图所示：</p><p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="/medias/images/mysqlDataLoss_1.jfif" alt=""></p><h2 id="主库写binlog失败"><a href="#主库写binlog失败" class="headerlink" title="主库写binlog失败"></a>主库写binlog失败</h2><p>master写binlog与innodb引擎写redo类似，由参数<code>sync_binlog</code>控制：</p><p>= 0 ：表示MySQL不控制binlog的刷新，由文件系统控制<code>binlog cache</code>的刷盘</p><p>= N ：表示每sync_binlog在N次事务提交后，对<code>binlog cache</code>中的内容刷盘</p><p><code>sync_binlog=1</code>时最安全，即表示每次事务提交，MySQL都会把binlog cache中的内容<code>flush disk</code>。这样在掉电等情况下，系统只有可能丢失1个事务的数据。但是<code>sync_binlog</code>为1时，系统的IO消耗非常大。</p><p>但是N的值也不易过大，否则在系统掉电时会丢失较多的事务。当前我们生产系统设置为100.</p><h2 id="主库写redo-log、binlog不实时造成的数据不一致"><a href="#主库写redo-log、binlog不实时造成的数据不一致" class="headerlink" title="主库写redo log、binlog不实时造成的数据不一致"></a>主库写redo log、binlog不实时造成的数据不一致</h2><p>1）<code>Redo log</code>未写入，但binlog已写入，则宕机恢复后从库数据比主库多。</p><p>2）<code>Redo log</code>写入了，但binlog未写入，则宕机恢复后从库数据量比主库少。</p><p>从目前来看，只能牺牲性能去换取数据的安全性，必须要设置<code>redo log</code>和<code>binlog</code>为实时刷盘 (控制<code>innodb_flush_log_at_trx_commit</code>和 <code>sync_binlog</code>)，如果对性能要求很高，则考虑使用SSD来替代机械盘。</p><p>几个重要的参数：</p><p>​    ①<code>sync_binlog</code>：决定刷盘时机,控制二进制日志被同步到磁盘前二进制日志提交组的数量</p><p>​    ②<code>max_binlog_size</code>：binlog文件的最大容量</p><p>​    ③<code>binlog_cache_size</code>：在事务中binlog的缓存大小</p><h2 id="从库写redo-log、binlog不实时造成的数据不一致"><a href="#从库写redo-log、binlog不实时造成的数据不一致" class="headerlink" title="从库写redo log、binlog不实时造成的数据不一致"></a>从库写redo log、binlog不实时造成的数据不一致</h2><p>从库读取主库的binlog日志后，需要落地3个文件：</p><p><code>relay log</code>：即IO Thread读取过来的主库binlog，内容格式与主库的binlog一致</p><p><code>relay log info</code>：记录SQL Thread应用的relay log的位置、文件号等信息</p><p><code>master info</code>：记录IO Thread读取主库的binlog的位置、文件号、延迟等信息</p><p>因此如果当这3个文件如果不及时落地，则宕机恢复后会导致数据的不一致。</p><p>在MySQL 5.6.2之前，从库记录的主库信息以及从库应用binlog的信息存放在文件中，<a href="http://xn--master-9l5j.xn--inforelay-log-z50u.info" target="_blank" rel="noopener">即master.info与relay-log.info</a>。在5.6.2版本之后，允许记录到table中，参数设置如下：</p><p>master info与relay info还有3个参数控制刷新：</p><p>1）<code>sync_relay_log</code>：默认为10000，即每10000次sync_relay_log事件会刷新到磁盘。为0则表示不刷新，交由OS的cache控制。</p><p>2）<code>sync_master_info</code>:若<code>master-info-repository</code>为FILE，当设置为0时，则每次sync_master_info事件都会刷新到磁盘，默认为10000次刷新到磁盘；若master-info-repository为TABLE，当设置为0时，则表不做任何更新，设置为1，则每次事件会更新表。默认为10000。</p><p>3）<code>sync_relay_log_info</code>：若relay_log_info_repository为FILE，当设置为0时，交由OS刷新磁盘，默认为10000次刷新到磁盘；若relay_log_info_repository为TABLE，则无论为任何值，每次evnet都会更新表。</p><p>如果参数设置如下：</p><p><code>sync_master_info = 1</code>，</p><p><code>sync_relay_log = 1</code>，</p><p><code>sync_relay_log_info = 1</code> ，</p><p><code>master-info-repository  = TABLE</code> ，</p><p><code>relay-log-info-repository = TABLE</code></p><p>将导致调用fsync()/fdatasync()随着master的事务的增加而增加，且若slave的binlog和redo也实时刷新的话，会带来很严重的IO性能瓶颈。</p><h2 id="主库宕机后无法及时恢复造成的数据不一致"><a href="#主库宕机后无法及时恢复造成的数据不一致" class="headerlink" title="主库宕机后无法及时恢复造成的数据不一致"></a>主库宕机后无法及时恢复造成的数据不一致</h2><p>当主库出现故障后，binlog未及时拉到从库中，或者各个从库收到的binlog不一致（多数是由于网络原因）。且主库无法在第一时间恢复：</p><p>1）如果主库不切换，则应用只能读写主库。如果有读写分离的场景则会影响应用。</p><p>2）如果将某一从库提升为新的主库（如<a href="https://zhuanlan.zhihu.com/p/440182196" target="_blank" rel="noopener">MHA</a>），那么原主库未传到从库的binlog数据则会丢失，并且还涉及到下面2个问题：</p><ul><li>各个从库之间接收到的binlog不一致，如果强制拉起一个从库做新主库，则从库之间数据会不一致。</li><li>原主库恢复正常后，原主库和新主库的binlog不一致。由于新的主库日志丢弃了部分原主库的binlog日志，那么会多出来故障时期的这部分binlog。</li></ul><p>对于上面出现的问题，业内已经有较成熟的方法来解决：</p><p>1）确保binlog全部传到从库</p><p>方案一：使用semisync replication（半同步复制）插件。半同步复制的特点是从库中有一台提交后，主库才能提交事务。优点是保证了主、从库的数据一致性；缺点是对性能影响很大，依赖网络，适合tps压力小的场景。</p><p>方案二：双写binlog，通过DBDR OS层的文件系统复制到备机，或者使用共享盘保存binlog日志。优点和方案一类似，但此方案缺点较明显：</p><ul><li>DBDR需要部署自己的服务</li><li>DBDR脑裂严重。在发生灾难场景时，往往不能正确切换。</li><li>需要建立heartbeat机制。保证被监控机的存活。</li></ul><p>方案三：架构层面调整，引入消息队列做异步消息处理。比如保证数据库写成功后，再异步队列的方式写一份，部分业务可以借助设计和数据流解决。</p><p>2）保证数据最小化丢失</p><p>上面的方案设计及架构比较复杂，如果能容忍数据的丢失，可以考虑使用<a href="https://zhuanlan.zhihu.com/p/440182196" target="_blank" rel="noopener">MHA</a>。</p><p>当master宕机后，<a href="https://zhuanlan.zhihu.com/p/440182196" target="_blank" rel="noopener">MHA</a>可以指定一台或者选延迟最低或者binlog pos最新的一台从库，并将其提升为主库。</p><p><a href="https://zhuanlan.zhihu.com/p/440182196" target="_blank" rel="noopener">MHA</a>在切换master后，原master可以修复后以新master的slave角色重新加入集群。从而达到高可用。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术总结 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> mysql </tag>
-            
-            <tag> 面试题 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>常见开发技巧</title>
       <link href="/developskill.html"/>
       <url>/developskill.html</url>
@@ -270,6 +214,62 @@
             <tag> Spring </tag>
             
             <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VirtualBox安装MacOS</title>
+      <link href="/virtualboxinstallmacos.html"/>
+      <url>/virtualboxinstallmacos.html</url>
+      
+        <content type="html"><![CDATA[<div align="center"><h1>VirtualBox安装MacOS</h1></div><blockquote><p>基于Windows上的VirtualBox安装MacOS</p></blockquote><div align="middle">    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="86" src="//music.163.com/outchain/player?type=2&amp;id=569212211&amp;auto=0&amp;height=66">    </iframe></div><h1 id="提前准备"><a href="#提前准备" class="headerlink" title="提前准备"></a>提前准备</h1><p>下载如下软件</p><ul><li><a href="https://git-scm.com/" target="_blank" rel="noopener">安装Git</a></li><li><a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="noopener">VirtualBox</a></li><li><a href="https://gitee.com/gyl_coding/macos_virtualbox" target="_blank" rel="noopener">克隆macos_virtualbox项目</a></li><li>将macos_virtualbox项目下的<code>dmg2img.exe</code>和<code>wget.exe</code>移动到Git安装目录的<code>~\Git\mingw64\bin</code>下面.</li></ul><h1 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h1><ol><li>进入macos_virtualbox项目目录下,右键进入 <code>Git Bash Here</code>.</li><li>执行<code>./macos-guest-virtualbox.sh</code>开始安装,其中会自动下载macos镜像和创建虚拟机,等待即可,大概一个小时.</li><li>如果virtualbox最后一行日志卡在<code>EB|#LOG:EXITBS:START</code>,则按如下操作,否则忽视该步骤<ul><li>将macos虚拟机关机</li><li>进入virtualbox安装目录打开CMD</li><li>在CMD中执行如下代码<code>VBoxManage modifyvm "macOS" --cpu-profile "Intel Core i7-6700K"</code></li></ul></li><li>正常情况下会自动初始化MacOS系统,如果VirtualBox卡在语言选择界面,则按 <code>Git Bash Here</code>中的日志操作即可.</li></ol><p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="/medias/images/29a740c2537207aaa2125021b9afea4.jpg" alt=""></p><h1 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h1><h2 id="苹果系统设置"><a href="#苹果系统设置" class="headerlink" title="苹果系统设置"></a>苹果系统设置</h2><p>   1、系统左上角苹果图标→系统偏好设置→辅助功能→显示，勾选“减弱动态效果”“减少透明度”和“无需用颜色区分”</p><p>   2、依旧是在系统偏好设置→程序坞，最小化窗口时使用“缩放效果”，取消勾选“弹跳打开应用程序”。</p><p>   3、依旧是在系统偏好设置→扩展，挨个点击左侧目录，将不需要的扩展全部去掉勾选。</p><p>   4、依旧是在系统偏好设置→用户与群组→登录项，选择用户，左下角开锁后，去掉不需要的登录项。</p><p>   5、VMware Tools的安装可以让虚拟机分辨率自适应，文件和剪贴板也可以直接与母鸡共享，属于使用必装，但安装后需要重新设置分辨率，否则画面会一直处于一个比较大的状态，影响体验，同时会有卡顿。<br>      VMware Tools的安装教程：<a href="https://www.dhzy.fun/archives/4366.html" target="_blank" rel="noopener">https://www.dhzy.fun/archives/4366.html</a></p><p>   依旧是在系统偏好设置→显示器→缩放，分辨率选择带有(HiDPI)的选项，然后勾选好，画面中的窗口会放大或者缩小。</p><p>   设置成功后拖动虚拟机窗口边界，虚拟机画面会根据虚拟机窗口大小进行自适应，但不会小于设置分辨率。系统提示“系统偏好设置”正在尝试解锁“安全性与隐私”偏好设置时，输入密码，解锁，将vmware-tools-daemon打钩即可。</p><h2 id="优化神器-beamoff"><a href="#优化神器-beamoff" class="headerlink" title="优化神器 beamoff"></a>优化神器 beamoff</h2><p>进入MacOS中Safari打开 <a href="http://files.cnblogs.com/files/yipu/beamoff.zip" target="_blank" rel="noopener">http://files.cnblogs.com/files/yipu/beamoff.zip</a><br>mac会自动解压,得到 beamoff.app<br>然后在: 系统偏好设置 - 用户与群组 - 选中你自己的用户名 - 选择 “登录项” 选项卡 - 点 + 号 找到你下载的beamoff.app</p><h1 id="参考链接："><a href="#参考链接：" class="headerlink" title="参考链接："></a>参考链接：</h1><p>AMD芯片无法启动: <a href="https://www.jianshu.com/p/c6c9aab4c715" target="_blank" rel="noopener">https://www.jianshu.com/p/c6c9aab4c715</a></p><p>MacOS设置优化: <a href="https://www.dhzy.fun/archives/4321.html" target="_blank" rel="noopener">https://www.dhzy.fun/archives/4321.html</a></p><p>MacOS优化: <a href="https://blog.csdn.net/whitehack/article/details/47074403" target="_blank" rel="noopener">https://blog.csdn.net/whitehack/article/details/47074403</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 操作系统 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> VirtualBox </tag>
+            
+            <tag> MacOS </tag>
+            
+            <tag> 虚拟机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Mysql丢失数据的场景</title>
+      <link href="/mysqldataloss.html"/>
+      <url>/mysqldataloss.html</url>
+      
+        <content type="html"><![CDATA[<div align="center"><h1>Mysql丢失数据的场景</h1></div><div align="middle">    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="86" src="//music.163.com/outchain/player?type=2&amp;id=1397282233&amp;auto=0&amp;height=66">    </iframe></div><h1 id="引擎层数据丢失场景"><a href="#引擎层数据丢失场景" class="headerlink" title="引擎层数据丢失场景"></a>引擎层数据丢失场景</h1><h2 id="InnoDB丢失数据场景分析-写redo-log失败"><a href="#InnoDB丢失数据场景分析-写redo-log失败" class="headerlink" title="InnoDB丢失数据场景分析/写redo log失败"></a>InnoDB丢失数据场景分析/写redo log失败</h2><p>事务提交时需要写redo log、undo log。数据页的变更会首先在内存中完成，同时将事务操作顺序再记录到redo log中。但如果MySQl 事务提交时，被更改的数据页还保存在内存中（称为脏页），未来得及flush到磁盘上系统正好宕机了,就会丢失该事务的数据。</p><p>配置的参数 <code>innodb_flush_log_at_trx_commit</code></p><p>0 ：每秒 <code>write os cache</code> &amp; <code>flush disk</code></p><p>1 ：每次commit都 <code>write os cache</code> &amp; <code>flush disk</code></p><p>2 ：每次commit都 <code>write os cache</code>&amp; <code>write file cache</code>（然后根据<code>innodb_flush_log_at_timeout</code>参数，默认为1s  flush disk）</p><p><code>innodb_flush_log_at_trx_commit=1</code>最为安全，因为每次commit都保证redo log写入了disk。但是这种方式性能对DML性能来说比较低，如果设置为2，DML性能要比设置为1高很多。</p><h2 id="MyISAM丢失数据场景分析"><a href="#MyISAM丢失数据场景分析" class="headerlink" title="MyISAM丢失数据场景分析"></a>MyISAM丢失数据场景分析</h2><p>由于MyISAM不支持事务，所以在生产环境中基本没有使用，且MyISAM没有data cache，所有DML操作只写到OS cache中，flush disk操作均由OS来完成，因此如果服务器宕机，这部分数据肯定会丢失。</p><h1 id="主从复制导致数据不一致的场景"><a href="#主从复制导致数据不一致的场景" class="headerlink" title="主从复制导致数据不一致的场景"></a>主从复制导致数据不一致的场景</h1><p>MySQL主从复制原理：MySQL主库在事务提交时写binlog，并通过<code>sync_binlog</code>参数来控制binlog刷新到磁盘“落地”。从库中有两个线程： IO线程负责从主库读取<code>binlog</code>，并记录到本地的<code>relay log</code>中；SQL线程再将<code>relay log</code>中的记录应用到从库。如下图所示：</p><p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="/medias/images/mysqlDataLoss_1.jfif" alt=""></p><h2 id="主库写binlog失败"><a href="#主库写binlog失败" class="headerlink" title="主库写binlog失败"></a>主库写binlog失败</h2><p>master写binlog与innodb引擎写redo类似，由参数<code>sync_binlog</code>控制：</p><p>= 0 ：表示MySQL不控制binlog的刷新，由文件系统控制<code>binlog cache</code>的刷盘</p><p>= N ：表示每sync_binlog在N次事务提交后，对<code>binlog cache</code>中的内容刷盘</p><p><code>sync_binlog=1</code>时最安全，即表示每次事务提交，MySQL都会把binlog cache中的内容<code>flush disk</code>。这样在掉电等情况下，系统只有可能丢失1个事务的数据。但是<code>sync_binlog</code>为1时，系统的IO消耗非常大。</p><p>但是N的值也不易过大，否则在系统掉电时会丢失较多的事务。当前我们生产系统设置为100.</p><h2 id="主库写redo-log、binlog不实时造成的数据不一致"><a href="#主库写redo-log、binlog不实时造成的数据不一致" class="headerlink" title="主库写redo log、binlog不实时造成的数据不一致"></a>主库写redo log、binlog不实时造成的数据不一致</h2><p>1）<code>Redo log</code>未写入，但binlog已写入，则宕机恢复后从库数据比主库多。</p><p>2）<code>Redo log</code>写入了，但binlog未写入，则宕机恢复后从库数据量比主库少。</p><p>从目前来看，只能牺牲性能去换取数据的安全性，必须要设置<code>redo log</code>和<code>binlog</code>为实时刷盘 (控制<code>innodb_flush_log_at_trx_commit</code>和 <code>sync_binlog</code>)，如果对性能要求很高，则考虑使用SSD来替代机械盘。</p><p>几个重要的参数：</p><p>​    ①<code>sync_binlog</code>：决定刷盘时机,控制二进制日志被同步到磁盘前二进制日志提交组的数量</p><p>​    ②<code>max_binlog_size</code>：binlog文件的最大容量</p><p>​    ③<code>binlog_cache_size</code>：在事务中binlog的缓存大小</p><h2 id="从库写redo-log、binlog不实时造成的数据不一致"><a href="#从库写redo-log、binlog不实时造成的数据不一致" class="headerlink" title="从库写redo log、binlog不实时造成的数据不一致"></a>从库写redo log、binlog不实时造成的数据不一致</h2><p>从库读取主库的binlog日志后，需要落地3个文件：</p><p><code>relay log</code>：即IO Thread读取过来的主库binlog，内容格式与主库的binlog一致</p><p><code>relay log info</code>：记录SQL Thread应用的relay log的位置、文件号等信息</p><p><code>master info</code>：记录IO Thread读取主库的binlog的位置、文件号、延迟等信息</p><p>因此如果当这3个文件如果不及时落地，则宕机恢复后会导致数据的不一致。</p><p>在MySQL 5.6.2之前，从库记录的主库信息以及从库应用binlog的信息存放在文件中，<a href="http://xn--master-9l5j.xn--inforelay-log-z50u.info" target="_blank" rel="noopener">即master.info与relay-log.info</a>。在5.6.2版本之后，允许记录到table中，参数设置如下：</p><p>master info与relay info还有3个参数控制刷新：</p><p>1）<code>sync_relay_log</code>：默认为10000，即每10000次sync_relay_log事件会刷新到磁盘。为0则表示不刷新，交由OS的cache控制。</p><p>2）<code>sync_master_info</code>:若<code>master-info-repository</code>为FILE，当设置为0时，则每次sync_master_info事件都会刷新到磁盘，默认为10000次刷新到磁盘；若master-info-repository为TABLE，当设置为0时，则表不做任何更新，设置为1，则每次事件会更新表。默认为10000。</p><p>3）<code>sync_relay_log_info</code>：若relay_log_info_repository为FILE，当设置为0时，交由OS刷新磁盘，默认为10000次刷新到磁盘；若relay_log_info_repository为TABLE，则无论为任何值，每次evnet都会更新表。</p><p>如果参数设置如下：</p><p><code>sync_master_info = 1</code>，</p><p><code>sync_relay_log = 1</code>，</p><p><code>sync_relay_log_info = 1</code> ，</p><p><code>master-info-repository  = TABLE</code> ，</p><p><code>relay-log-info-repository = TABLE</code></p><p>将导致调用fsync()/fdatasync()随着master的事务的增加而增加，且若slave的binlog和redo也实时刷新的话，会带来很严重的IO性能瓶颈。</p><h2 id="主库宕机后无法及时恢复造成的数据不一致"><a href="#主库宕机后无法及时恢复造成的数据不一致" class="headerlink" title="主库宕机后无法及时恢复造成的数据不一致"></a>主库宕机后无法及时恢复造成的数据不一致</h2><p>当主库出现故障后，binlog未及时拉到从库中，或者各个从库收到的binlog不一致（多数是由于网络原因）。且主库无法在第一时间恢复：</p><p>1）如果主库不切换，则应用只能读写主库。如果有读写分离的场景则会影响应用。</p><p>2）如果将某一从库提升为新的主库（如<a href="https://zhuanlan.zhihu.com/p/440182196" target="_blank" rel="noopener">MHA</a>），那么原主库未传到从库的binlog数据则会丢失，并且还涉及到下面2个问题：</p><ul><li>各个从库之间接收到的binlog不一致，如果强制拉起一个从库做新主库，则从库之间数据会不一致。</li><li>原主库恢复正常后，原主库和新主库的binlog不一致。由于新的主库日志丢弃了部分原主库的binlog日志，那么会多出来故障时期的这部分binlog。</li></ul><p>对于上面出现的问题，业内已经有较成熟的方法来解决：</p><p>1）确保binlog全部传到从库</p><p>方案一：使用semisync replication（半同步复制）插件。半同步复制的特点是从库中有一台提交后，主库才能提交事务。优点是保证了主、从库的数据一致性；缺点是对性能影响很大，依赖网络，适合tps压力小的场景。</p><p>方案二：双写binlog，通过DBDR OS层的文件系统复制到备机，或者使用共享盘保存binlog日志。优点和方案一类似，但此方案缺点较明显：</p><ul><li>DBDR需要部署自己的服务</li><li>DBDR脑裂严重。在发生灾难场景时，往往不能正确切换。</li><li>需要建立heartbeat机制。保证被监控机的存活。</li></ul><p>方案三：架构层面调整，引入消息队列做异步消息处理。比如保证数据库写成功后，再异步队列的方式写一份，部分业务可以借助设计和数据流解决。</p><p>2）保证数据最小化丢失</p><p>上面的方案设计及架构比较复杂，如果能容忍数据的丢失，可以考虑使用<a href="https://zhuanlan.zhihu.com/p/440182196" target="_blank" rel="noopener">MHA</a>。</p><p>当master宕机后，<a href="https://zhuanlan.zhihu.com/p/440182196" target="_blank" rel="noopener">MHA</a>可以指定一台或者选延迟最低或者binlog pos最新的一台从库，并将其提升为主库。</p><p><a href="https://zhuanlan.zhihu.com/p/440182196" target="_blank" rel="noopener">MHA</a>在切换master后，原master可以修复后以新master的slave角色重新加入集群。从而达到高可用。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术总结 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mysql </tag>
+            
+            <tag> 面试题 </tag>
             
         </tags>
       
