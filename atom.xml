@@ -231,42 +231,6 @@
   </entry>
   
   <entry>
-    <title>VirtualBox安装MacOS</title>
-    <link href="https://www.gyl0730.top/virtualboxinstallmacos.html"/>
-    <id>https://www.gyl0730.top/virtualboxinstallmacos.html</id>
-    <published>2022-10-14T06:44:00.000Z</published>
-    <updated>2022-10-13T10:35:00.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;div align=&quot;center&quot;&gt;&lt;h1&gt;VirtualBox安装MacOS&lt;/h1&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;基于Windows上的VirtualBox安装MacOS&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div align=&quot;middle&quot;&gt;
- 
-        
-      
-    
-    </summary>
-    
-      <category term="操作系统" scheme="https://www.gyl0730.top/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-      <category term="VirtualBox" scheme="https://www.gyl0730.top/tags/VirtualBox/"/>
-    
-      <category term="MacOS" scheme="https://www.gyl0730.top/tags/MacOS/"/>
-    
-      <category term="虚拟机" scheme="https://www.gyl0730.top/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
     <title>常见开发技巧</title>
     <link href="https://www.gyl0730.top/developskill.html"/>
     <id>https://www.gyl0730.top/developskill.html</id>
@@ -299,6 +263,42 @@
       <category term="Spring" scheme="https://www.gyl0730.top/tags/Spring/"/>
     
       <category term="Windows" scheme="https://www.gyl0730.top/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VirtualBox安装MacOS</title>
+    <link href="https://www.gyl0730.top/virtualboxinstallmacos.html"/>
+    <id>https://www.gyl0730.top/virtualboxinstallmacos.html</id>
+    <published>2022-10-14T06:44:00.000Z</published>
+    <updated>2022-10-13T10:35:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;center&quot;&gt;&lt;h1&gt;VirtualBox安装MacOS&lt;/h1&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;基于Windows上的VirtualBox安装MacOS&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div align=&quot;middle&quot;&gt;
+ 
+        
+      
+    
+    </summary>
+    
+      <category term="操作系统" scheme="https://www.gyl0730.top/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="VirtualBox" scheme="https://www.gyl0730.top/tags/VirtualBox/"/>
+    
+      <category term="MacOS" scheme="https://www.gyl0730.top/tags/MacOS/"/>
+    
+      <category term="虚拟机" scheme="https://www.gyl0730.top/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     
   </entry>
   

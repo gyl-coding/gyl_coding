@@ -9602,7 +9602,7 @@ PERFORMANCE OF THIS SOFTWARE.
         }, i.prototype.then = function (t, e) {
             var n = this;
             if (n !== undefined && n._data !== undefined) {
-                n._data.QQAvatar = 'https://gyl-coding.github.io/gyl_coding/raw/master/medias/images/2d4c34650731cfe7bc4abfb1ba1f929.jpg';
+                n._data.QQAvatar = 'https://gyl-coding.github.io/gyl_coding/medias/images/2d4c34650731cfe7bc4abfb1ba1f929.jpg';
             }
             //默认头像地址
             // console.log(n._data.QQAvatar)
