@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Gongylの驿站</title>
+  
+  <subtitle>Gongylの驿站</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://www.gyl0730.top/"/>
+  <updated>2026-08-03T07:00:00.000Z</updated>
+  <id>https://www.gyl0730.top/</id>
+  
+  <author>
+    <name>Gongyl</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>轻松的一天：AI 开发流</title>
+    <link href="https://www.gyl0730.top/mydaywithaiassisteddev.html"/>
+    <id>https://www.gyl0730.top/mydaywithaiassisteddev.html</id>
+    <published>2026-08-03T07:00:00.000Z</published>
+    <updated>2026-08-03T07:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;center&quot;&gt;&lt;h1&gt;轻松的一天：AI 开发流&lt;/h1&gt;&lt;/div&gt;
+
+&lt;div align=&quot;middle&quot;&gt;
+    &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="开发技巧" scheme="https://www.gyl0730.top/categories/%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/"/>
+    
+    
+      <category term="Java" scheme="https://www.gyl0730.top/tags/Java/"/>
+    
+      <category term="AI编程" scheme="https://www.gyl0730.top/tags/AI%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="效率" scheme="https://www.gyl0730.top/tags/%E6%95%88%E7%8E%87/"/>
+    
+      <category term="工作流" scheme="https://www.gyl0730.top/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Codex 接入 DeepSeek V4</title>
+    <link href="https://www.gyl0730.top/codexdeepseekv4.html"/>
+    <id>https://www.gyl0730.top/codexdeepseekv4.html</id>
+    <published>2026-08-03T06:00:00.000Z</published>
+    <updated>2026-08-03T06:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;center&quot;&gt;&lt;h1&gt;Codex 接入 DeepSeek V4&lt;/h1&gt;&lt;/div&gt;
+
+&lt;div align=&quot;middle&quot;&gt;
+    &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="开发技巧" scheme="https://www.gyl0730.top/categories/%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/"/>
+    
+    
+      <category term="Codex" scheme="https://www.gyl0730.top/tags/Codex/"/>
+    
+      <category term="DeepSeek" scheme="https://www.gyl0730.top/tags/DeepSeek/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用 Claude Code 完整开发一个 Spring Boot 项目，实录与复盘</title>
+    <link href="https://www.gyl0730.top/claudecodespringbootpractice.html"/>
+    <id>https://www.gyl0730.top/claudecodespringbootpractice.html</id>
+    <published>2026-07-19T06:00:00.000Z</published>
+    <updated>2026-07-19T06:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;center&quot;&gt;&lt;h1&gt;用 Claude Code 完整开发一个 Spring Boot 项目，实录与复盘&lt;/h1&gt;&lt;/div&gt;
+
+&lt;div align=&quot;middle&quot;&gt;
+    &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="开发技巧" scheme="https://www.gyl0730.top/categories/%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/"/>
+    
+    
+      <category term="Claude Code" scheme="https://www.gyl0730.top/tags/Claude-Code/"/>
+    
+      <category term="Java" scheme="https://www.gyl0730.top/tags/Java/"/>
+    
+      <category term="Spring Boot" scheme="https://www.gyl0730.top/tags/Spring-Boot/"/>
+    
+      <category term="AI编程" scheme="https://www.gyl0730.top/tags/AI%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI Agent 开发 prompt 提示词怎么写</title>
+    <link href="https://www.gyl0730.top/aiagentpromptguide.html"/>
+    <id>https://www.gyl0730.top/aiagentpromptguide.html</id>
+    <published>2026-06-17T07:30:00.000Z</published>
+    <updated>2026-06-17T07:30:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;center&quot;&gt;&lt;h1&gt;AI Agent 开发 prompt 提示词怎么写&lt;/h1&gt;&lt;/div&gt;
+
+&lt;div align=&quot;middle&quot;&gt;
+    &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="开发技巧" scheme="https://www.gyl0730.top/categories/%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/"/>
+    
+    
+      <category term="Agent" scheme="https://www.gyl0730.top/tags/Agent/"/>
+    
+      <category term="AI" scheme="https://www.gyl0730.top/tags/AI/"/>
+    
+      <category term="Prompt" scheme="https://www.gyl0730.top/tags/Prompt/"/>
+    
+      <category term="大模型" scheme="https://www.gyl0730.top/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI 编码工具横评：Codex vs Claude Code vs Cursor</title>
+    <link href="https://www.gyl0730.top/aicodingtoolscomparison.html"/>
+    <id>https://www.gyl0730.top/aicodingtoolscomparison.html</id>
+    <published>2026-04-21T08:00:00.000Z</published>
+    <updated>2026-04-21T08:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;center&quot;&gt;&lt;h1&gt;AI 编码工具横评：Codex vs Claude Code vs Cursor&lt;/h1&gt;&lt;/div&gt;
+
+&lt;div align=&quot;middle&quot;&gt;
+    &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="开发技巧" scheme="https://www.gyl0730.top/categories/%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/"/>
+    
+    
+      <category term="Codex" scheme="https://www.gyl0730.top/tags/Codex/"/>
+    
+      <category term="Claude Code" scheme="https://www.gyl0730.top/tags/Claude-Code/"/>
+    
+      <category term="Cursor" scheme="https://www.gyl0730.top/tags/Cursor/"/>
+    
+      <category term="横评" scheme="https://www.gyl0730.top/tags/%E6%A8%AA%E8%AF%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>6年 Java 工程师转型 AI Agent 开发，我是怎么学的</title>
+    <link href="https://www.gyl0730.top/javatoaiagentroadmap.html"/>
+    <id>https://www.gyl0730.top/javatoaiagentroadmap.html</id>
+    <published>2026-01-13T01:30:00.000Z</published>
+    <updated>2026-01-13T01:30:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;center&quot;&gt;&lt;h1&gt;6年 Java 工程师转型 AI Agent 开发，我是怎么学的&lt;/h1&gt;&lt;/div&gt;
+
+&lt;div align=&quot;middle&quot;&gt;
+    &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="AI" scheme="https://www.gyl0730.top/categories/AI/"/>
+    
+    
+      <category term="Agent" scheme="https://www.gyl0730.top/tags/Agent/"/>
+    
+      <category term="AI" scheme="https://www.gyl0730.top/tags/AI/"/>
+    
+      <category term="Java" scheme="https://www.gyl0730.top/tags/Java/"/>
+    
+      <category term="学习路线" scheme="https://www.gyl0730.top/tags/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从 Spring Boot 的视角理解 MCP</title>
+    <link href="https://www.gyl0730.top/understandmcpviaspringboot.html"/>
+    <id>https://www.gyl0730.top/understandmcpviaspringboot.html</id>
+    <published>2025-08-09T02:30:00.000Z</published>
+    <updated>2025-08-09T02:30:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;center&quot;&gt;&lt;h1&gt;从 Spring Boot 的视角理解 MCP&lt;/h1&gt;&lt;/div&gt;
+
+&lt;div align=&quot;middle&quot;&gt;
+    &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="AI" scheme="https://www.gyl0730.top/categories/AI/"/>
+    
+    
+      <category term="Agent" scheme="https://www.gyl0730.top/tags/Agent/"/>
+    
+      <category term="Java" scheme="https://www.gyl0730.top/tags/Java/"/>
+    
+      <category term="Spring Boot" scheme="https://www.gyl0730.top/tags/Spring-Boot/"/>
+    
+      <category term="MCP" scheme="https://www.gyl0730.top/tags/MCP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Agent 也是&quot;系统&quot;：聊聊可观测性与 Debug</title>
+    <link href="https://www.gyl0730.top/agentobservabilityanddebug.html"/>
+    <id>https://www.gyl0730.top/agentobservabilityanddebug.html</id>
+    <published>2025-03-24T03:30:00.000Z</published>
+    <updated>2025-03-24T03:30:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;center&quot;&gt;&lt;h1&gt;Agent 也是&quot;系统&quot;：聊聊可观测性与 Debug&lt;/h1&gt;&lt;/div&gt;
+
+&lt;div align=&quot;middle&quot;&gt;
+    &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="AI" scheme="https://www.gyl0730.top/categories/AI/"/>
+    
+    
+      <category term="Agent" scheme="https://www.gyl0730.top/tags/Agent/"/>
+    
+      <category term="可观测性" scheme="https://www.gyl0730.top/tags/%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7/"/>
+    
+      <category term="Debug" scheme="https://www.gyl0730.top/tags/Debug/"/>
+    
+      <category term="AI" scheme="https://www.gyl0730.top/tags/AI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>笔记本散热优化</title>
+    <link href="https://www.gyl0730.top/notebooksiliconegrease.html"/>
+    <id>https://www.gyl0730.top/notebooksiliconegrease.html</id>
+    <published>2024-03-23T10:11:00.000Z</published>
+    <updated>2024-03-23T12:01:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;center&quot;&gt;&lt;h1&gt;清灰换硅脂&lt;/h1&gt;&lt;/div&gt;
+
+&lt;div align=&quot;middle&quot;&gt;
+    &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="硬件" scheme="https://www.gyl0730.top/categories/%E7%A1%AC%E4%BB%B6/"/>
+    
+    
+      <category term="散热" scheme="https://www.gyl0730.top/tags/%E6%95%A3%E7%83%AD/"/>
+    
+      <category term="硅脂" scheme="https://www.gyl0730.top/tags/%E7%A1%85%E8%84%82/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>香港迪士尼出行游玩攻略</title>
+    <link href="https://www.gyl0730.top/hongkong.html"/>
+    <id>https://www.gyl0730.top/hongkong.html</id>
+    <published>2022-10-19T10:11:00.000Z</published>
+    <updated>2022-10-19T10:11:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;center&quot;&gt;&lt;h1&gt;香港迪士尼攻略&lt;/h1&gt;&lt;/div&gt;
+
+&lt;div align=&quot;middle&quot;&gt;
+    &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="旅游" scheme="https://www.gyl0730.top/categories/%E6%97%85%E6%B8%B8/"/>
+    
+    
+      <category term="出境" scheme="https://www.gyl0730.top/tags/%E5%87%BA%E5%A2%83/"/>
+    
+      <category term="香港" scheme="https://www.gyl0730.top/tags/%E9%A6%99%E6%B8%AF/"/>
+    
+      <category term="迪士尼" scheme="https://www.gyl0730.top/tags/%E8%BF%AA%E5%A3%AB%E5%B0%BC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows设置</title>
+    <link href="https://www.gyl0730.top/windowssetting.html"/>
+    <id>https://www.gyl0730.top/windowssetting.html</id>
+    <published>2022-10-19T10:11:00.000Z</published>
+    <updated>2022-10-19T10:11:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;center&quot;&gt;&lt;h1&gt;Windows设置&lt;/h1&gt;&lt;/div&gt;
+
+&lt;div align=&quot;middle&quot;&gt;
+    &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="系统" scheme="https://www.gyl0730.top/categories/%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="注册表" scheme="https://www.gyl0730.top/tags/%E6%B3%A8%E5%86%8C%E8%A1%A8/"/>
+    
+      <category term="windows" scheme="https://www.gyl0730.top/tags/windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git Commit Message 编写指南</title>
+    <link href="https://www.gyl0730.top/gitcommitmessage.html"/>
+    <id>https://www.gyl0730.top/gitcommitmessage.html</id>
+    <published>2022-10-19T10:11:00.000Z</published>
+    <updated>2022-10-19T10:11:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;center&quot;&gt;&lt;h1&gt;Git Commit Message 编写指南&lt;/h1&gt;&lt;/div&gt;
+
+&lt;div align=&quot;middle&quot;&gt;
+    &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="软件使用" scheme="https://www.gyl0730.top/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
+    
+    
+      <category term="Git" scheme="https://www.gyl0730.top/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker 挂载容器配置文件</title>
+    <link href="https://www.gyl0730.top/dockervolume.html"/>
+    <id>https://www.gyl0730.top/dockervolume.html</id>
+    <published>2022-10-14T06:44:00.000Z</published>
+    <updated>2022-10-13T10:35:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;center&quot;&gt;&lt;h1&gt;Docker 挂载容器配置文件&lt;/h1&gt;&lt;/div&gt;
+
+&lt;div align=&quot;middle&quot;&gt;
+    &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="开发技巧" scheme="https://www.gyl0730.top/categories/%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/"/>
+    
+    
+      <category term="Docker" scheme="https://www.gyl0730.top/tags/Docker/"/>
+    
+      <category term="Docker compose" scheme="https://www.gyl0730.top/tags/Docker-compose/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>项目开发经验</title>
+    <link href="https://www.gyl0730.top/eps-xiang-mu.html"/>
+    <id>https://www.gyl0730.top/eps-xiang-mu.html</id>
+    <published>2022-10-14T06:44:00.000Z</published>
+    <updated>2022-10-13T10:35:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;设备管理平台&quot;&gt;&lt;a href=&quot;#设备管理平台&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="项目实战" scheme="https://www.gyl0730.top/categories/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/"/>
+    
+    
+      <category term="项目实战" scheme="https://www.gyl0730.top/tags/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker运行Redis容器</title>
+    <link href="https://www.gyl0730.top/runredisondocker.html"/>
+    <id>https://www.gyl0730.top/runredisondocker.html</id>
+    <published>2022-10-14T06:44:00.000Z</published>
+    <updated>2022-10-13T10:35:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;center&quot;&gt;&lt;h1&gt;Docker运行Redis stack服务&lt;/h1&gt;&lt;/div&gt;
+
+&lt;div align=&quot;middle&quot;&gt;
+    &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="软件安装与配置" scheme="https://www.gyl0730.top/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
+    
+    
+      <category term="Docker" scheme="https://www.gyl0730.top/tags/Docker/"/>
+    
+      <category term="Redis" scheme="https://www.gyl0730.top/tags/Redis/"/>
+    
+      <category term="容器技术" scheme="https://www.gyl0730.top/tags/%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VirtualBox安装MacOS</title>
+    <link href="https://www.gyl0730.top/virtualboxinstallmacos.html"/>
+    <id>https://www.gyl0730.top/virtualboxinstallmacos.html</id>
+    <published>2022-10-14T06:44:00.000Z</published>
+    <updated>2022-10-13T10:35:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;center&quot;&gt;&lt;h1&gt;VirtualBox安装MacOS&lt;/h1&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;基于Windows上的VirtualBox安装MacOS&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div align=&quot;middle&quot;&gt;
+ 
+        
+      
+    
+    </summary>
+    
+      <category term="操作系统" scheme="https://www.gyl0730.top/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="VirtualBox" scheme="https://www.gyl0730.top/tags/VirtualBox/"/>
+    
+      <category term="MacOS" scheme="https://www.gyl0730.top/tags/MacOS/"/>
+    
+      <category term="虚拟机" scheme="https://www.gyl0730.top/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常见开发技巧</title>
+    <link href="https://www.gyl0730.top/developskill.html"/>
+    <id>https://www.gyl0730.top/developskill.html</id>
+    <published>2022-10-14T06:44:00.000Z</published>
+    <updated>2022-10-13T10:35:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;center&quot;&gt;&lt;h1&gt;常见开发技巧&lt;/h1&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;记录了一些常见的开发技巧，可能并不完善，欢迎留言讨论。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div align=&quot;middle&quot;&gt;
+    &lt;iframe
+        
+      
+    
+    </summary>
+    
+      <category term="开发技巧" scheme="https://www.gyl0730.top/categories/%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/"/>
+    
+    
+      <category term="Idea" scheme="https://www.gyl0730.top/tags/Idea/"/>
+    
+      <category term="Spring" scheme="https://www.gyl0730.top/tags/Spring/"/>
+    
+      <category term="Windows" scheme="https://www.gyl0730.top/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mysql丢失数据的场景</title>
+    <link href="https://www.gyl0730.top/mysqldataloss.html"/>
+    <id>https://www.gyl0730.top/mysqldataloss.html</id>
+    <published>2022-10-14T06:44:00.000Z</published>
+    <updated>2022-10-13T10:35:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;center&quot;&gt;&lt;h1&gt;Mysql丢失数据的场景&lt;/h1&gt;&lt;/div&gt;
+
+&lt;div align=&quot;middle&quot;&gt;
+    &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="技术总结" scheme="https://www.gyl0730.top/categories/%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="mysql" scheme="https://www.gyl0730.top/tags/mysql/"/>
+    
+      <category term="面试题" scheme="https://www.gyl0730.top/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>个人博客搭建避坑指南</title>
+    <link href="https://www.gyl0730.top/developbloglog.html"/>
+    <id>https://www.gyl0730.top/developbloglog.html</id>
+    <published>2022-10-10T03:44:00.000Z</published>
+    <updated>2022-10-13T10:35:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;center&quot;&gt;&lt;h1&gt;个人博客搭建避坑指南&lt;/h1&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;本文不适用纯小白，无任何开发经验的人士。此博客基于(博客地址:&lt;a href=&quot;https://sunhwee.com)二次开发。&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="软件安装与配置" scheme="https://www.gyl0730.top/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
+    
+    
+      <category term="Hexo" scheme="https://www.gyl0730.top/tags/Hexo/"/>
+    
+      <category term="博客" scheme="https://www.gyl0730.top/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="Gitee" scheme="https://www.gyl0730.top/tags/Gitee/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>个人博客搭建转载文章</title>
+    <link href="https://www.gyl0730.top/blogopensource.html"/>
+    <id>https://www.gyl0730.top/blogopensource.html</id>
+    <published>2019-08-27T03:41:03.000Z</published>
+    <updated>2026-08-03T07:15:55.984Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;简短介绍&quot;&gt;&lt;a href=&quot;#简短介绍&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="软件安装与配置" scheme="https://www.gyl0730.top/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
+    
+    
+      <category term="Hexo" scheme="https://www.gyl0730.top/tags/Hexo/"/>
+    
+      <category term="Github" scheme="https://www.gyl0730.top/tags/Github/"/>
+    
+      <category term="博客" scheme="https://www.gyl0730.top/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+</feed>
