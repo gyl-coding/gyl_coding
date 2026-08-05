@@ -93,13 +93,6 @@
   </url>
   
   <url>
-    <loc>https://gyl-coding.github.io/gyl_coding/contact/index.html</loc>
-    
-    <lastmod>2024-03-23T02:13:54.713Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://gyl-coding.github.io/gyl_coding/friends/index.html</loc>
     
     <lastmod>2024-03-23T02:13:54.713Z</lastmod>
@@ -108,6 +101,13 @@
   
   <url>
     <loc>https://gyl-coding.github.io/gyl_coding/galleries/index.html</loc>
+    
+    <lastmod>2024-03-23T02:13:54.713Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://gyl-coding.github.io/gyl_coding/contact/index.html</loc>
     
     <lastmod>2024-03-23T02:13:54.713Z</lastmod>
     
@@ -191,14 +191,14 @@
   </url>
   
   <url>
-    <loc>https://gyl-coding.github.io/gyl_coding/virtualboxinstallmacos.html</loc>
+    <loc>https://gyl-coding.github.io/gyl_coding/runredisondocker.html</loc>
     
     <lastmod>2022-10-13T10:35:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://gyl-coding.github.io/gyl_coding/runredisondocker.html</loc>
+    <loc>https://gyl-coding.github.io/gyl_coding/virtualboxinstallmacos.html</loc>
     
     <lastmod>2022-10-13T10:35:00.000Z</lastmod>
     
@@ -212,14 +212,14 @@
   </url>
   
   <url>
-    <loc>https://gyl-coding.github.io/gyl_coding/mysqldataloss.html</loc>
+    <loc>https://gyl-coding.github.io/gyl_coding/developskill.html</loc>
     
     <lastmod>2022-10-13T10:35:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://gyl-coding.github.io/gyl_coding/developskill.html</loc>
+    <loc>https://gyl-coding.github.io/gyl_coding/mysqldataloss.html</loc>
     
     <lastmod>2022-10-13T10:35:00.000Z</lastmod>
     

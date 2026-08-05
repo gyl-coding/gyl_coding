@@ -694,7 +694,7 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        2.7k
+                        2.6k
                     </div>
                     
 
@@ -782,7 +782,7 @@
 <li><strong>Gateway API key</strong>：就是 DeepSeek 开放平台的 API Key，用于鉴权。</li>
 <li><strong>Gateway auth scheme</strong>：认证方式必须选 <code>bearer</code>，选错的话请求会被拒绝，返回 401。</li>
 </ul>
-<h1 id="四、添加模型并启用-1M-上下文"><a href="#四、添加模型并启用-1M-上下文" class="headerlink" title="四、添加模型并启用 1M 上下文"></a>四、添加模型并启用 1M 上下文</h1><p>Gateway 配好后，还需要在模型列表里添加 DeepSeek 的模型。这里的关键是：<strong>Model ID 用 Claude 体系的命名，Display name 填 DeepSeek 的模型名</strong>，两者各司其职——Model ID 决定网关怎么路由，Display name 决定你在界面里看到的名字。</p>
+<h1 id="四、添加模型并启用-1M-上下文"><a href="#四、添加模型并启用-1M-上下文" class="headerlink" title="四、添加模型并启用 1M 上下文"></a>四、添加模型并启用 1M 上下文</h1><p>Gateway 配好后，还需要在模型列表里添加 DeepSeek 的模型。这里的关键是：<strong>Model ID 用 Claude 体系的命名</strong>，由它决定网关怎么路由到对应的 DeepSeek 模型。</p>
 <p>按下面两张表添加即可：</p>
 <p><strong>1. 旗舰模型（V4 Pro）</strong></p>
 <table>
@@ -795,10 +795,6 @@
 <tbody><tr>
 <td>Model ID</td>
 <td><code>claude-opus-pro</code></td>
-</tr>
-<tr>
-<td>Display name</td>
-<td><code>deepseek-v4-pro</code></td>
 </tr>
 <tr>
 <td>Offer 1M-context variant</td>
@@ -819,11 +815,7 @@
 </thead>
 <tbody><tr>
 <td>Model ID</td>
-<td><code>claude-sonnet-flash</code></td>
-</tr>
-<tr>
-<td>Display name</td>
-<td><code>deepseek-v4-flash</code></td>
+<td><code>claude-haiku-flash</code></td>
 </tr>
 <tr>
 <td>Offer 1M-context variant</td>
@@ -836,8 +828,7 @@
 </tbody></table>
 <p>几个字段说明：</p>
 <ul>
-<li><strong>Model ID</strong>：客户端用来识别模型、路由请求的标识，走 Claude 体系的命名（<code>claude-opus-pro</code> / <code>claude-sonnet-flash</code>），网关会自动映射到对应的 DeepSeek 模型。</li>
-<li><strong>Display name</strong>：你在界面下拉框里看到的名字，填 <code>deepseek-v4-pro</code> / <code>deepseek-v4-flash</code>，一眼就能认出用的是哪个模型。</li>
+<li><strong>Model ID</strong>：客户端用来识别模型、路由请求的标识，走 Claude 体系的命名（<code>claude-opus-pro</code> / <code>claude-haiku-flash</code>），网关会自动映射到对应的 DeepSeek 模型。</li>
 <li><strong>Offer 1M-context variant</strong>：开启后，模型会提供一个 1M 长上下文的变体选项，需要处理大文档时直接切换。</li>
 <li><strong>Default to 1M context</strong>：开启后默认就用 1M 长上下文，省去每次手动切换。</li>
 </ul>
@@ -887,7 +878,7 @@
 <span class="token comment" spellcheck="true"># Windows（PowerShell，写入当前用户环境变量）</span>
 setx CLAUDE_CODE_ATTRIBUTION_HEADER 0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>值为 <code>0</code> 表示关闭，不再携带该署名块；值为 <code>1</code> 或留空表示开启（默认）。是否关闭看个人需求，只连官方接口的话开着也没影响。</p>
-<h1 id="六、模型映射关系"><a href="#六、模型映射关系" class="headerlink" title="六、模型映射关系"></a>六、模型映射关系</h1><p>Claude Desktop 里，以 <code>claude-</code> 开头的模型名会自动映射到对应的 DeepSeek 模型，这也正是上一节 Model ID 直接填 <code>claude-opus-pro</code> / <code>claude-sonnet-flash</code> 就能用的原因。</p>
+<h1 id="六、模型映射关系"><a href="#六、模型映射关系" class="headerlink" title="六、模型映射关系"></a>六、模型映射关系</h1><p>Claude Desktop 里，以 <code>claude-</code> 开头的模型名会自动映射到对应的 DeepSeek 模型，这也正是上一节 Model ID 直接填 <code>claude-opus-pro</code> / <code>claude-haiku-flash</code> 就能用的原因。</p>
 <p>参考官方文档，映射关系如下：</p>
 <table>
 <thead>
@@ -901,15 +892,11 @@ setx CLAUDE_CODE_ATTRIBUTION_HEADER 0<span aria-hidden="true" class="line-number
 <td><code>deepseek-v4-pro</code></td>
 </tr>
 <tr>
-<td><code>claude-haiku</code> 开头</td>
-<td><code>deepseek-v4-flash</code></td>
-</tr>
-<tr>
-<td><code>claude-sonnet</code> 开头</td>
-<td><code>deepseek-v4-flash</code></td>
+<td><code>claude-haiku-flash</code></td>
+<td><code>deepseek-flash</code></td>
 </tr>
 </tbody></table>
-<p>也就是说，Model ID 既可以填 <code>claude-opus-pro</code>、<code>claude-sonnet-flash</code> 这类 Claude 命名（自动映射），也可以直接填 <code>deepseek-v4-pro</code>、<code>deepseek-v4-flash</code>（显式指定）。两种填法都行，Display name 统一填 DeepSeek 名字方便识别。</p>
+<p>也就是说，Model ID 既可以填 <code>claude-opus-pro</code>、<code>claude-haiku-flash</code> 这类 Claude 命名（自动映射），也可以直接填 <code>deepseek-v4-pro</code>、<code>deepseek-flash</code>（显式指定）。两种填法都行。</p>
 <h1 id="七、实测效果"><a href="#七、实测效果" class="headerlink" title="七、实测效果"></a>七、实测效果</h1><p>配置完成后直接开测。DeepSeek V4 Pro 在 Claude Desktop 里跑复杂任务（写代码、分析长文档）的体验比较接近原版 Claude，日常对话、写作完全够用。</p>
 <p>几点实测感受：</p>
 <ul>
@@ -923,14 +910,14 @@ setx CLAUDE_CODE_ATTRIBUTION_HEADER 0<span aria-hidden="true" class="line-number
 <h1 id="八、常见问题"><a href="#八、常见问题" class="headerlink" title="八、常见问题"></a>八、常见问题</h1><p><strong>Q：配置后报 401 认证失败？</strong></p>
 <p>A：大概率是 Gateway auth scheme 没选 <code>bearer</code>，检查一下这个字段。</p>
 <p><strong>Q：Model ID 填 <code>claude-opus-pro</code> 还是 <code>deepseek-v4-pro</code>？</strong></p>
-<p>A：两种都行。填 <code>claude-</code> 开头的会走自动映射（见第六节），填 <code>deepseek-</code> 开头的是显式指定，效果等价；Display name 统一填 <code>deepseek-v4-pro</code> / <code>deepseek-v4-flash</code> 方便识别。</p>
+<p>A：两种都行。填 <code>claude-</code> 开头的会走自动映射（见第六节），填 <code>deepseek-</code> 开头的是显式指定，效果等价。</p>
 <p><strong>Q：怎么让模型不读敏感文件？</strong></p>
 <p>A：在 Settings → General → Instructions for Claude 里写入规则（见第五节）：第 2 条禁止读写账号、密码、Token、Key、.env 等敏感信息并自动脱敏，第 5 条要求代码示例用环境变量或占位符不硬编码密钥。从指令层面约束它。</p>
 <p><strong>Q：找不到 Developer 菜单？</strong></p>
 <p>A：开发者模式入口只在较新版本提供，先升级 Claude Desktop 到最新版，再走 Help → Troubleshooting → Enable Developer Mode。</p>
 <h1 id="九、总结"><a href="#九、总结" class="headerlink" title="九、总结"></a>九、总结</h1><ul>
 <li>Claude Desktop 通过开发者模式 + Gateway 方式即可接入 DeepSeek V4，关键三个字段：base URL 填 <code>https://api.deepseek.com/anthropic</code>、API Key 填 <code>sk-</code> 开头的密钥、auth scheme 选 <code>bearer</code>。</li>
-<li>添加模型时，Model ID 填 <code>claude-opus-pro</code> / <code>claude-sonnet-flash</code>（走自动映射），Display name 填 <code>deepseek-v4-pro</code> / <code>deepseek-v4-flash</code>，并打开 Offer 1M-context variant 和 Default to 1M context 两个开关。</li>
+<li>添加模型时，Model ID 填 <code>claude-opus-pro</code> / <code>claude-haiku-flash</code>（走自动映射），并打开 Offer 1M-context variant 和 Default to 1M context 两个开关。</li>
 <li>用 Instructions for Claude 给模型立好”不碰敏感文件”的规矩，Transcript width 调成 wide，看长代码更舒服。</li>
 <li>官方文档：<a href="https://api-docs.deepseek.com/zh-cn/guides/anthropic_api" target="_blank" rel="noopener">DeepSeek Anthropic API 接入文档</a></li>
 </ul>
@@ -1443,7 +1430,7 @@ setx CLAUDE_CODE_ATTRIBUTION_HEADER 0<span aria-hidden="true" class="line-number
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            DeepSeek 官方提供了 Anthropic 兼容接口，Claude Desktop 通过开发者模式即可接入 deepseek-v4-pro / deepseek-v4-flash。本文记录开启开发者模式、配置 Gateway、添加模型、自定义偏好设置的完整步骤。
+                            DeepSeek 官方提供了 Anthropic 兼容接口，Claude Desktop 通过开发者模式即可接入 deepseek-v4-pro / deepseek-flash。本文记录开启开发者模式、配置 Gateway、添加模型、自定义偏好设置的完整步骤。
                         
                     </div>
                     <div class="publish-info">
@@ -1722,7 +1709,7 @@ setx CLAUDE_CODE_ATTRIBUTION_HEADER 0<span aria-hidden="true" class="line-number
 
             
                 &nbsp; | &nbsp;字数统计:&nbsp;
-                <span class="white-color">31.6k</span> 字
+                <span class="white-color">31.5k</span> 字
             
 
             
@@ -1877,7 +1864,7 @@ $(function () {
         <!-- 背景动态彩带 Gongyl shw 2018  add 2019.09.15-->
         
 
-    
+    <script src="/gyl_coding/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/gyl_coding/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":false},"react":{"opacity":0.7}});</script>
         <style>
             [bg-lazy] {
                 background-image: none !important;
@@ -1890,5 +1877,5 @@ $(function () {
                 preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z\d\-\.\+]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(t.test(e.href)||r.test(e.href))&&(e.href=a.dataset.original)})});</script><script>(r=>{r.imageLazyLoadSetting.processImages=t;var a=r.imageLazyLoadSetting.isSPA,o=r.imageLazyLoadSetting.preloadRatio||1,d=i();function i(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(t){(a||t)&&(d=i());for(var e,n=0;n<d.length;n++)0<=(e=(e=d[n]).getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(r.innerHeight*o||document.documentElement.clientHeight*o)&&(()=>{var t,e,a,o,i=d[n];e=function(){d=d.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).dataset.loaded||(t.hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(a=new Image,o=t.getAttribute("data-original"),a.onload=function(){t.src=o,t.removeAttribute("data-original"),t.setAttribute("data-loaded",!0),e&&e()},a.onerror=function(){t.removeAttribute("data-original"),t.setAttribute("data-loaded",!1),t.src=o},t.src!==o&&(a.src=o)))})()}function e(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",e),r.addEventListener("resize",e),r.addEventListener("orientationchange",e)})(this);</script><script src="/gyl_coding/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/gyl_coding/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z\d\-\.\+]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(t.test(e.href)||r.test(e.href))&&(e.href=a.dataset.original)})});</script><script>(r=>{r.imageLazyLoadSetting.processImages=t;var a=r.imageLazyLoadSetting.isSPA,o=r.imageLazyLoadSetting.preloadRatio||1,d=i();function i(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(t){(a||t)&&(d=i());for(var e,n=0;n<d.length;n++)0<=(e=(e=d[n]).getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(r.innerHeight*o||document.documentElement.clientHeight*o)&&(()=>{var t,e,a,o,i=d[n];e=function(){d=d.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).dataset.loaded||(t.hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(a=new Image,o=t.getAttribute("data-original"),a.onload=function(){t.src=o,t.removeAttribute("data-original"),t.setAttribute("data-loaded",!0),e&&e()},a.onerror=function(){t.removeAttribute("data-original"),t.setAttribute("data-loaded",!1),t.src=o},t.src!==o&&(a.src=o)))})()}function e(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",e),r.addEventListener("resize",e),r.addEventListener("orientationchange",e)})(this);</script></body>
 </html>
