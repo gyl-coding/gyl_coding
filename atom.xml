@@ -52,6 +52,41 @@
   </entry>
   
   <entry>
+    <title>Claude Desktop 接入 DeepSeek V4 Pro 教程</title>
+    <link href="https://gyl-coding.github.io/gyl_coding/claudedesktopdeepseekv4pro.html"/>
+    <id>https://gyl-coding.github.io/gyl_coding/claudedesktopdeepseekv4pro.html</id>
+    <published>2026-08-04T03:30:00.000Z</published>
+    <updated>2026-08-04T03:30:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;center&quot;&gt;&lt;h1&gt;Claude Desktop 接入 DeepSeek V4 Pro 教程&lt;/h1&gt;&lt;/div&gt;
+
+&lt;div align=&quot;middle&quot;&gt;
+    &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="开发技巧" scheme="https://gyl-coding.github.io/gyl_coding/categories/%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/"/>
+    
+    
+      <category term="Claude Desktop" scheme="https://gyl-coding.github.io/gyl_coding/tags/Claude-Desktop/"/>
+    
+      <category term="DeepSeek" scheme="https://gyl-coding.github.io/gyl_coding/tags/DeepSeek/"/>
+    
+      <category term="Anthropic" scheme="https://gyl-coding.github.io/gyl_coding/tags/Anthropic/"/>
+    
+      <category term="大模型" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Codex 接入 DeepSeek V4</title>
     <link href="https://gyl-coding.github.io/gyl_coding/codexdeepseekv4.html"/>
     <id>https://gyl-coding.github.io/gyl_coding/codexdeepseekv4.html</id>
@@ -142,13 +177,13 @@
       <category term="开发技巧" scheme="https://gyl-coding.github.io/gyl_coding/categories/%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/"/>
     
     
-      <category term="AI" scheme="https://gyl-coding.github.io/gyl_coding/tags/AI/"/>
-    
       <category term="Agent" scheme="https://gyl-coding.github.io/gyl_coding/tags/Agent/"/>
     
-      <category term="Prompt" scheme="https://gyl-coding.github.io/gyl_coding/tags/Prompt/"/>
+      <category term="AI" scheme="https://gyl-coding.github.io/gyl_coding/tags/AI/"/>
     
       <category term="大模型" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
+    
+      <category term="Prompt" scheme="https://gyl-coding.github.io/gyl_coding/tags/Prompt/"/>
     
   </entry>
   
@@ -212,9 +247,9 @@
       <category term="AI" scheme="https://gyl-coding.github.io/gyl_coding/categories/AI/"/>
     
     
-      <category term="AI" scheme="https://gyl-coding.github.io/gyl_coding/tags/AI/"/>
-    
       <category term="Agent" scheme="https://gyl-coding.github.io/gyl_coding/tags/Agent/"/>
+    
+      <category term="AI" scheme="https://gyl-coding.github.io/gyl_coding/tags/AI/"/>
     
       <category term="Java" scheme="https://gyl-coding.github.io/gyl_coding/tags/Java/"/>
     
@@ -282,13 +317,13 @@
       <category term="AI" scheme="https://gyl-coding.github.io/gyl_coding/categories/AI/"/>
     
     
-      <category term="AI" scheme="https://gyl-coding.github.io/gyl_coding/tags/AI/"/>
-    
       <category term="Agent" scheme="https://gyl-coding.github.io/gyl_coding/tags/Agent/"/>
     
       <category term="可观测性" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7/"/>
     
       <category term="Debug" scheme="https://gyl-coding.github.io/gyl_coding/tags/Debug/"/>
+    
+      <category term="AI" scheme="https://gyl-coding.github.io/gyl_coding/tags/AI/"/>
     
   </entry>
   
@@ -417,32 +452,6 @@
   </entry>
   
   <entry>
-    <title>项目开发经验</title>
-    <link href="https://gyl-coding.github.io/gyl_coding/eps-xiang-mu.html"/>
-    <id>https://gyl-coding.github.io/gyl_coding/eps-xiang-mu.html</id>
-    <published>2022-10-14T06:44:00.000Z</published>
-    <updated>2022-10-13T10:35:00.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;设备管理平台&quot;&gt;&lt;a href=&quot;#设备管理平台&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="项目实战" scheme="https://gyl-coding.github.io/gyl_coding/categories/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/"/>
-    
-    
-      <category term="项目实战" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Docker 挂载容器配置文件</title>
     <link href="https://gyl-coding.github.io/gyl_coding/dockervolume.html"/>
     <id>https://gyl-coding.github.io/gyl_coding/dockervolume.html</id>
@@ -470,6 +479,32 @@
       <category term="Docker" scheme="https://gyl-coding.github.io/gyl_coding/tags/Docker/"/>
     
       <category term="Docker compose" scheme="https://gyl-coding.github.io/gyl_coding/tags/Docker-compose/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>项目开发经验</title>
+    <link href="https://gyl-coding.github.io/gyl_coding/eps-xiang-mu.html"/>
+    <id>https://gyl-coding.github.io/gyl_coding/eps-xiang-mu.html</id>
+    <published>2022-10-14T06:44:00.000Z</published>
+    <updated>2022-10-13T10:35:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;设备管理平台&quot;&gt;&lt;a href=&quot;#设备管理平台&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="项目实战" scheme="https://gyl-coding.github.io/gyl_coding/categories/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/"/>
+    
+    
+      <category term="项目实战" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/"/>
     
   </entry>
   
@@ -503,6 +538,42 @@
       <category term="Redis" scheme="https://gyl-coding.github.io/gyl_coding/tags/Redis/"/>
     
       <category term="容器技术" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VirtualBox安装MacOS</title>
+    <link href="https://gyl-coding.github.io/gyl_coding/virtualboxinstallmacos.html"/>
+    <id>https://gyl-coding.github.io/gyl_coding/virtualboxinstallmacos.html</id>
+    <published>2022-10-14T06:44:00.000Z</published>
+    <updated>2022-10-13T10:35:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;center&quot;&gt;&lt;h1&gt;VirtualBox安装MacOS&lt;/h1&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;基于Windows上的VirtualBox安装MacOS&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div align=&quot;middle&quot;&gt;
+ 
+        
+      
+    
+    </summary>
+    
+      <category term="操作系统" scheme="https://gyl-coding.github.io/gyl_coding/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="VirtualBox" scheme="https://gyl-coding.github.io/gyl_coding/tags/VirtualBox/"/>
+    
+      <category term="MacOS" scheme="https://gyl-coding.github.io/gyl_coding/tags/MacOS/"/>
+    
+      <category term="虚拟机" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     
   </entry>
   
@@ -574,42 +645,6 @@
   </entry>
   
   <entry>
-    <title>VirtualBox安装MacOS</title>
-    <link href="https://gyl-coding.github.io/gyl_coding/virtualboxinstallmacos.html"/>
-    <id>https://gyl-coding.github.io/gyl_coding/virtualboxinstallmacos.html</id>
-    <published>2022-10-14T06:44:00.000Z</published>
-    <updated>2022-10-13T10:35:00.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;div align=&quot;center&quot;&gt;&lt;h1&gt;VirtualBox安装MacOS&lt;/h1&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;基于Windows上的VirtualBox安装MacOS&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div align=&quot;middle&quot;&gt;
- 
-        
-      
-    
-    </summary>
-    
-      <category term="操作系统" scheme="https://gyl-coding.github.io/gyl_coding/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-      <category term="VirtualBox" scheme="https://gyl-coding.github.io/gyl_coding/tags/VirtualBox/"/>
-    
-      <category term="MacOS" scheme="https://gyl-coding.github.io/gyl_coding/tags/MacOS/"/>
-    
-      <category term="虚拟机" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
     <title>个人博客搭建避坑指南</title>
     <link href="https://gyl-coding.github.io/gyl_coding/developbloglog.html"/>
     <id>https://gyl-coding.github.io/gyl_coding/developbloglog.html</id>
@@ -639,36 +674,6 @@
       <category term="博客" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="Gitee" scheme="https://gyl-coding.github.io/gyl_coding/tags/Gitee/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>个人博客搭建转载文章</title>
-    <link href="https://gyl-coding.github.io/gyl_coding/blogopensource.html"/>
-    <id>https://gyl-coding.github.io/gyl_coding/blogopensource.html</id>
-    <published>2019-08-27T03:41:03.000Z</published>
-    <updated>2026-08-03T07:15:55.984Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;简短介绍&quot;&gt;&lt;a href=&quot;#简短介绍&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="软件安装与配置" scheme="https://gyl-coding.github.io/gyl_coding/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
-    
-    
-      <category term="Hexo" scheme="https://gyl-coding.github.io/gyl_coding/tags/Hexo/"/>
-    
-      <category term="Github" scheme="https://gyl-coding.github.io/gyl_coding/tags/Github/"/>
-    
-      <category term="博客" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
