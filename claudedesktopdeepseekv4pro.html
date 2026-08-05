@@ -648,12 +648,12 @@
                                 <span class="chip bg-color">大模型</span>
                             </a>
                         
-                            <a href="/gyl_coding/tags/Claude-Desktop/" target="_blank">
-                                <span class="chip bg-color">Claude Desktop</span>
-                            </a>
-                        
                             <a href="/gyl_coding/tags/DeepSeek/" target="_blank">
                                 <span class="chip bg-color">DeepSeek</span>
+                            </a>
+                        
+                            <a href="/gyl_coding/tags/Claude-Desktop/" target="_blank">
+                                <span class="chip bg-color">Claude Desktop</span>
                             </a>
                         
                             <a href="/gyl_coding/tags/Anthropic/" target="_blank">
@@ -694,14 +694,14 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        2.8k
+                        2.9k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        10 分
+                        11 分
                     </div>
                     
                 
@@ -782,8 +782,12 @@
 <li><strong>Gateway API key</strong>：就是 DeepSeek 开放平台的 API Key，用于鉴权。</li>
 <li><strong>Gateway auth scheme</strong>：认证方式必须选 <code>bearer</code>，选错的话请求会被拒绝，返回 401。</li>
 </ul>
-<h1 id="四、添加模型并启用-1M-上下文"><a href="#四、添加模型并启用-1M-上下文" class="headerlink" title="四、添加模型并启用 1M 上下文"></a>四、添加模型并启用 1M 上下文</h1><p>Gateway 配好后，还需要在模型列表里添加 DeepSeek 的模型。这里的关键是：<strong>Model ID 用 Claude 体系的命名</strong>，由它决定网关怎么路由到对应的 DeepSeek 模型。</p>
-<p>按下面两张表添加即可：</p>
+<h1 id="四、添加模型并启用-1M-上下文"><a href="#四、添加模型并启用-1M-上下文" class="headerlink" title="四、添加模型并启用 1M 上下文"></a>四、添加模型并启用 1M 上下文</h1><p>Gateway 配好后，还需要在模型列表里添加 DeepSeek 的模型。先搞清 Model ID 和 Display name 两个字段的分工：</p>
+<ul>
+<li><strong>Model ID</strong>：客户端调用模型时真正发给网关的模型标识，决定请求路由到哪个模型。</li>
+<li><strong>Display name</strong>：只是界面下拉框里显示的名字，方便认出实际用的是哪个模型，<strong>不参与路由</strong>。</li>
+</ul>
+<p>按下面两张表添加即可（Model ID 填 <code>claude-</code> 开头的名字，网关会自动映射到 DeepSeek 模型）：</p>
 <p><strong>1. 旗舰模型（V4 Pro）</strong></p>
 <table>
 <thead>
@@ -834,10 +838,36 @@
 <td>打开</td>
 </tr>
 </tbody></table>
-<p>几个字段说明：</p>
+<p>为什么 Model ID 必须填 <code>claude-</code> 开头？这里其实有两层原因：</p>
+<p><strong>1. Claude Desktop 会校验模型名</strong></p>
+<p>第三方推理配置里的 Model ID 要过客户端的模型名校验——只有 Anthropic 体系的模型名才放行。直接填 <code>deepseek-v4-pro</code> 这类 DeepSeek 原生名，新版 Claude Desktop 会直接拒绝，报错类似：</p>
+<pre class="line-numbers language-text"><code class="language-text">Invalid custom3p enterprise config: inferenceModels: configured model "deepseek-v4-pro" is not an Anthropic model.<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>2. DeepSeek 网关负责把 Claude 模型名映射到 DeepSeek 模型</strong></p>
+<p>Claude Desktop 把 <code>claude-opus-pro</code> 原样发给网关后，DeepSeek 的 Anthropic 兼容接口按官方映射规则把它路由到 <code>deepseek-v4-pro</code>：</p>
+<table>
+<thead>
+<tr>
+<th>Model ID（客户端发给网关）</th>
+<th>网关映射到</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>claude-opus-pro</code></td>
+<td><code>deepseek-v4-pro</code></td>
+</tr>
+<tr>
+<td><code>claude-sonnet-flash</code></td>
+<td><code>deepseek-v4-flash</code></td>
+</tr>
+</tbody></table>
+<p>官方映射规则是：<code>claude-opus*</code> 开头 → <code>deepseek-v4-pro</code>，<code>claude-haiku*</code> / <code>claude-sonnet*</code> 开头 → <code>deepseek-v4-flash</code>。所以 Model ID 统一填 <code>claude-</code> 开头即可，靠的就是这条映射。</p>
+<p>需要说明的是：Model ID 不必是 Anthropic 的真实型号，只要以对应前缀开头、又能过 Desktop 的模型名校验就行——DeepSeek 只认前缀。所以填官方真实名（如 <code>claude-opus-4-5</code>、<code>claude-sonnet-4-5</code>），或本文用的 <code>claude-opus-pro</code>、<code>claude-sonnet-flash</code>，前缀对了都能正确路由。</p>
+<blockquote>
+<p>补充：Claude Code（命令行客户端）走环境变量配置，没有 Desktop 这层模型名校验，所以可以直接写 <code>deepseek-v4-pro[1m]</code> 这类原生名；但 Claude Desktop 的 Gateway 配置里，Model ID 建议一律用 <code>claude-</code> 开头。</p>
+</blockquote>
+<p><strong>Display name 只负责显示</strong>：填 <code>deepseek-v4-pro</code> / <code>deepseek-v4-flash</code>，下拉框里就能一眼认出实际用的是哪个 DeepSeek 模型；留空则显示 Model ID 本身。</p>
+<p>其余字段说明：</p>
 <ul>
-<li><strong>Model ID</strong>：客户端用来识别模型、路由请求的标识，走 Claude 体系的命名（<code>claude-opus-pro</code> / <code>claude-sonnet-flash</code>），网关会自动映射到对应的 DeepSeek 模型。</li>
-<li><strong>Display name</strong>：界面下拉框里显示的名字。这里要<strong>增加别名</strong>，把 Model ID 映射到对应的 DeepSeek 模型：<code>claude-opus-pro</code> → <code>deepseek-v4-pro</code>、<code>claude-sonnet-flash</code> → <code>deepseek-v4-flash</code>，这样下拉框里显示的就是 DeepSeek 的模型名。</li>
 <li><strong>Offer 1M-context variant</strong>：开启后，模型会提供一个 1M 长上下文的变体选项，需要处理大文档时直接切换。</li>
 <li><strong>Default to 1M context</strong>：开启后默认就用 1M 长上下文，省去每次手动切换。</li>
 </ul>
@@ -868,63 +898,43 @@
 </blockquote>
 <p><strong>2. 对话宽度（Transcript width）</strong></p>
 <p>在 <strong>Settings → Claude Code → Transcript width</strong> 里，把宽度设置为 <strong>wide</strong>。这样代码和长文本在对话里不会折行折得很难看，展示长代码、长日志时更清晰。</p>
-<p><strong>3. 关闭署名头（CLAUDE_CODE_ATTRIBUTION_HEADER）</strong></p>
+<h1 id="六、实测效果"><a href="#六、实测效果" class="headerlink" title="六、实测效果"></a>六、实测效果</h1><p>配置完成后直接开测。DeepSeek V4 Pro 在 Claude Desktop 里跑复杂任务（写代码、分析长文档）的体验比较接近原版 Claude，日常对话、写作完全够用。</p>
+<p>几点实测感受：</p>
+<ul>
+<li><strong>响应速度</strong>：V4 Pro 偏重推理，复杂问题思考时间略长，但质量高；日常简单问题/开发用 V4 Flash 更快。</li>
+<li><strong>长上下文</strong>：开启 1M-context 后，把一个大文件直接拖进对话让它分析，不会像以前那样被上下文限制截断，体验提升明显。</li>
+</ul>
 <blockquote>
-<p>先说清楚：这个环境变量是 <strong>Claude Code（命令行客户端）</strong> 的设置，和 Claude Desktop 没有关系——Claude Desktop 不读取 <code>CLAUDE_CODE_</code> 开头的变量。<strong>如果你只用桌面端，这一节可以跳过</strong>；如果你是 Claude Code 接第三方模型，再继续看。</p>
+<p>说明：以上为我的实际使用感受，不同版本和网络环境下效果可能略有差异，以官方最新文档为准。</p>
 </blockquote>
-<p>它控制的是 Claude Code 在每次调用模型时，往 system prompt 开头注入的一段署名/计费块（里面带客户端版本 <code>cc_version</code> 和会话指纹 <code>cch</code>）。连 Anthropic 官方接口时官方会把它剥掉，不影响任何功能；但像本文这样走 DeepSeek 等第三方 Anthropic 兼容网关时，这段内容会原样发给网关——某些版本里 <code>cch=</code> 片段每次请求都会变化，会破坏网关侧按前缀匹配的 prompt 缓存，导致每次都重新处理整个上下文、响应明显变慢。所以走第三方模型时，建议把它关掉。</p>
-<p>配置方式任选其一：</p>
-<p><strong>方式一：写入 <code>~/.claude/settings.json</code> 的 <code>env</code> 块</strong>（推荐，常驻生效）</p>
+<h1 id="七、常见问题"><a href="#七、常见问题" class="headerlink" title="七、常见问题"></a>七、常见问题</h1><p><strong>Q：配置后报 401 认证失败？</strong></p>
+<p>A：大概率是 Gateway auth scheme 没选 <code>bearer</code>，检查一下这个字段。</p>
+<p><strong>Q：Model ID 填 <code>claude-opus-pro</code> 还是 <code>deepseek-v4-pro</code>？</strong></p>
+<p>A：填 <code>claude-opus-pro</code>。Claude Desktop 的第三方推理配置会校验模型名，直接填 <code>deepseek-v4-pro</code> 会被客户端拒绝（报 “is not an Anthropic model”）。填 <code>claude-</code> 开头走的是 DeepSeek 网关的官方映射，见第四节。</p>
+<p><strong>Q：怎么让模型不读敏感文件？</strong></p>
+<p>A：在 Settings → General → Instructions for Claude 里写入规则（见第五节）：第 2 条禁止读写账号、密码、Token、Key、.env 等敏感信息并自动脱敏，第 5 条要求代码示例用环境变量或占位符不硬编码密钥。从指令层面约束它。</p>
+<p><strong>Q：找不到 Developer 菜单？</strong></p>
+<p>A：开发者模式入口只在较新版本提供，先升级 Claude Desktop 到最新版，再走 Help → Troubleshooting → Enable Developer Mode。</p>
+<p><strong>Q：用 Claude Code 走第三方网关，响应明显变慢？（CLAUDE_CODE_ATTRIBUTION_HEADER）</strong></p>
+<p>A：这是 Claude Code（命令行客户端）的行为，和 Claude Desktop 无关——Desktop 不读取 <code>CLAUDE_CODE_</code> 开头的变量。Claude Code 默认会往每次请求的 system prompt 开头注入一段署名/计费块（含客户端版本 <code>cc_version</code> 和会话指纹 <code>cch</code>）。连 Anthropic 官方接口时官方会把它剥掉，不影响功能；但走 DeepSeek 这类第三方 Anthropic 兼容网关时，这段内容会原样发给网关——某些版本里 <code>cch=</code> 每次请求都会变化，会破坏网关侧按前缀匹配的 prompt 缓存，导致每次都重新处理整个上下文、响应明显变慢。所以走第三方模型时建议关掉，关闭方式任选其一：</p>
+<ul>
+<li>写入 <code>~/.claude/settings.json</code> 的 <code>env</code> 块（推荐，常驻生效）：</li>
+</ul>
 <pre class="line-numbers language-json"><code class="language-json"><span class="token punctuation">{</span>
   <span class="token property">"env"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"CLAUDE_CODE_ATTRIBUTION_HEADER"</span><span class="token operator">:</span> <span class="token string">"0"</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><strong>方式二：设置系统环境变量</strong></p>
+<ul>
+<li>设置系统环境变量：</li>
+</ul>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># macOS / Linux</span>
 <span class="token function">export</span> CLAUDE_CODE_ATTRIBUTION_HEADER<span class="token operator">=</span>0
 
 <span class="token comment" spellcheck="true"># Windows（PowerShell，写入当前用户环境变量）</span>
 setx CLAUDE_CODE_ATTRIBUTION_HEADER 0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>值为 <code>0</code> 表示关闭，不再携带该署名块；值为 <code>1</code> 或留空表示开启（默认）。是否关闭看个人需求，只连官方接口的话开着也没影响。</p>
-<h1 id="六、模型映射关系"><a href="#六、模型映射关系" class="headerlink" title="六、模型映射关系"></a>六、模型映射关系</h1><p>Claude Desktop 里，以 <code>claude-</code> 开头的模型名会自动映射到对应的 DeepSeek 模型，这也正是上一节 Model ID 直接填 <code>claude-opus-pro</code> / <code>claude-sonnet-flash</code> 就能用的原因。</p>
-<p>参考官方文档，映射关系如下：</p>
-<table>
-<thead>
-<tr>
-<th>Model ID</th>
-<th>Display name（别名映射）</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>claude-opus-pro</code></td>
-<td><code>deepseek-v4-pro</code></td>
-</tr>
-<tr>
-<td><code>claude-sonnet-flash</code></td>
-<td><code>deepseek-v4-flash</code></td>
-</tr>
-</tbody></table>
-<p>也就是说，Model ID 既可以填 <code>claude-opus-pro</code>、<code>claude-sonnet-flash</code> 这类 Claude 命名（自动映射），也可以直接填 <code>deepseek-v4-pro</code>、<code>deepseek-v4-flash</code>（显式指定）。两种填法都行；Display name 里<strong>增加别名</strong>，把 Model ID 映射到对应的 DeepSeek 模型（<code>claude-opus-pro</code> → <code>deepseek-v4-pro</code>、<code>claude-sonnet-flash</code> → <code>deepseek-v4-flash</code>），这样下拉框里显示的就是 <code>deepseek-v4-pro</code> / <code>deepseek-v4-flash</code>，一眼能认出实际用的是哪个模型。</p>
-<h1 id="七、实测效果"><a href="#七、实测效果" class="headerlink" title="七、实测效果"></a>七、实测效果</h1><p>配置完成后直接开测。DeepSeek V4 Pro 在 Claude Desktop 里跑复杂任务（写代码、分析长文档）的体验比较接近原版 Claude，日常对话、写作完全够用。</p>
-<p>几点实测感受：</p>
-<ul>
-<li><strong>响应速度</strong>：V4 Pro 偏重推理，复杂问题思考时间略长，但质量高；日常简单问题/开发用 V4 Flash 更快。</li>
-<li><strong>长上下文</strong>：开启 1M-context 后，把一个大文件直接拖进对话让它分析，不会像以前那样被上下文限制截断，体验提升明显。</li>
-<li><strong>生态兼容</strong>：因为是走 Anthropic 协议，Claude Desktop 原有的项目、Artifacts 等能力基本都能正常用。</li>
-</ul>
-<blockquote>
-<p>说明：以上为我的实际使用感受，不同版本和网络环境下效果可能略有差异，以官方最新文档为准。</p>
-</blockquote>
-<h1 id="八、常见问题"><a href="#八、常见问题" class="headerlink" title="八、常见问题"></a>八、常见问题</h1><p><strong>Q：配置后报 401 认证失败？</strong></p>
-<p>A：大概率是 Gateway auth scheme 没选 <code>bearer</code>，检查一下这个字段。</p>
-<p><strong>Q：Model ID 填 <code>claude-opus-pro</code> 还是 <code>deepseek-v4-pro</code>？</strong></p>
-<p>A：两种都行。填 <code>claude-</code> 开头的会走自动映射（见第六节），填 <code>deepseek-</code> 开头的是显式指定，效果等价。</p>
-<p><strong>Q：怎么让模型不读敏感文件？</strong></p>
-<p>A：在 Settings → General → Instructions for Claude 里写入规则（见第五节）：第 2 条禁止读写账号、密码、Token、Key、.env 等敏感信息并自动脱敏，第 5 条要求代码示例用环境变量或占位符不硬编码密钥。从指令层面约束它。</p>
-<p><strong>Q：找不到 Developer 菜单？</strong></p>
-<p>A：开发者模式入口只在较新版本提供，先升级 Claude Desktop 到最新版，再走 Help → Troubleshooting → Enable Developer Mode。</p>
-<h1 id="九、总结"><a href="#九、总结" class="headerlink" title="九、总结"></a>九、总结</h1><ul>
+<p>值为 <code>0</code> 表示关闭，不再携带署名块；值为 <code>1</code> 或留空表示开启（默认）。只连官方接口的话开着也没影响。</p>
+<h1 id="八、总结"><a href="#八、总结" class="headerlink" title="八、总结"></a>八、总结</h1><ul>
 <li>Claude Desktop 通过开发者模式 + Gateway 方式即可接入 DeepSeek V4，关键三个字段：base URL 填 <code>https://api.deepseek.com/anthropic</code>、API Key 填 <code>sk-</code> 开头的密钥、auth scheme 选 <code>bearer</code>。</li>
 <li>添加模型时，Model ID 填 <code>claude-opus-pro</code> / <code>claude-sonnet-flash</code>（走自动映射），并打开 Offer 1M-context variant 和 Default to 1M context 两个开关。</li>
 <li>用 Instructions for Claude 给模型立好”不碰敏感文件”的规矩，Transcript width 调成 wide，看长代码更舒服。</li>
@@ -1466,12 +1476,12 @@ setx CLAUDE_CODE_ATTRIBUTION_HEADER 0<span aria-hidden="true" class="line-number
                         <span class="chip bg-color">大模型</span>
                     </a>
                     
-                    <a href="/gyl_coding/tags/Claude-Desktop/" target="_blank">
-                        <span class="chip bg-color">Claude Desktop</span>
-                    </a>
-                    
                     <a href="/gyl_coding/tags/DeepSeek/" target="_blank">
                         <span class="chip bg-color">DeepSeek</span>
+                    </a>
+                    
+                    <a href="/gyl_coding/tags/Claude-Desktop/" target="_blank">
+                        <span class="chip bg-color">Claude Desktop</span>
                     </a>
                     
                     <a href="/gyl_coding/tags/Anthropic/" target="_blank">
@@ -1718,7 +1728,7 @@ setx CLAUDE_CODE_ATTRIBUTION_HEADER 0<span aria-hidden="true" class="line-number
 
             
                 &nbsp; | &nbsp;字数统计:&nbsp;
-                <span class="white-color">31.6k</span> 字
+                <span class="white-color">31.7k</span> 字
             
 
             
