@@ -694,7 +694,7 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        2.7k
+                        2.8k
                     </div>
                     
 
@@ -794,11 +794,11 @@
 </thead>
 <tbody><tr>
 <td>Model ID</td>
-<td><code>claude-opus-4-5</code></td>
+<td><code>claude-opus-pro</code></td>
 </tr>
 <tr>
 <td>Display name</td>
-<td><code>pro</code></td>
+<td><code>deepseek-v4-pro</code></td>
 </tr>
 <tr>
 <td>Offer 1M-context variant</td>
@@ -819,11 +819,11 @@
 </thead>
 <tbody><tr>
 <td>Model ID</td>
-<td><code>claude-haiku-4-5</code></td>
+<td><code>claude-sonnet-flash</code></td>
 </tr>
 <tr>
 <td>Display name</td>
-<td><code>flash</code></td>
+<td><code>deepseek-v4-flash</code></td>
 </tr>
 <tr>
 <td>Offer 1M-context variant</td>
@@ -836,8 +836,8 @@
 </tbody></table>
 <p>几个字段说明：</p>
 <ul>
-<li><strong>Model ID</strong>：客户端用来识别模型、路由请求的标识，走 Claude 体系的命名（<code>claude-opus-4-5</code> / <code>claude-haiku-4-5</code>），网关会自动映射到对应的 DeepSeek 模型。</li>
-<li><strong>Display name</strong>：界面下拉框里显示的名字，<code>claude-opus-4-5</code> 填 <code>pro</code>、<code>claude-haiku-4-5</code> 填 <code>flash</code>，由于Claude对国产模型的限制，尽量别出现deepseek字样。</li>
+<li><strong>Model ID</strong>：客户端用来识别模型、路由请求的标识，走 Claude 体系的命名（<code>claude-opus-pro</code> / <code>claude-sonnet-flash</code>），网关会自动映射到对应的 DeepSeek 模型。</li>
+<li><strong>Display name</strong>：界面下拉框里显示的名字。这里要<strong>增加别名</strong>，把 Model ID 映射到对应的 DeepSeek 模型：<code>claude-opus-pro</code> → <code>deepseek-v4-pro</code>、<code>claude-sonnet-flash</code> → <code>deepseek-v4-flash</code>，这样下拉框里显示的就是 DeepSeek 的模型名。</li>
 <li><strong>Offer 1M-context variant</strong>：开启后，模型会提供一个 1M 长上下文的变体选项，需要处理大文档时直接切换。</li>
 <li><strong>Default to 1M context</strong>：开启后默认就用 1M 长上下文，省去每次手动切换。</li>
 </ul>
@@ -887,28 +887,25 @@
 <span class="token comment" spellcheck="true"># Windows（PowerShell，写入当前用户环境变量）</span>
 setx CLAUDE_CODE_ATTRIBUTION_HEADER 0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>值为 <code>0</code> 表示关闭，不再携带该署名块；值为 <code>1</code> 或留空表示开启（默认）。是否关闭看个人需求，只连官方接口的话开着也没影响。</p>
-<h1 id="六、模型映射关系"><a href="#六、模型映射关系" class="headerlink" title="六、模型映射关系"></a>六、模型映射关系</h1><p>Claude Desktop 里，以 <code>claude-</code> 开头的模型名会自动映射到对应的 DeepSeek 模型，这也正是上一节 Model ID 直接填 <code>claude-opus-4-5</code> / <code>claude-haiku-4-5</code> 就能用的原因。</p>
+<h1 id="六、模型映射关系"><a href="#六、模型映射关系" class="headerlink" title="六、模型映射关系"></a>六、模型映射关系</h1><p>Claude Desktop 里，以 <code>claude-</code> 开头的模型名会自动映射到对应的 DeepSeek 模型，这也正是上一节 Model ID 直接填 <code>claude-opus-pro</code> / <code>claude-sonnet-flash</code> 就能用的原因。</p>
 <p>参考官方文档，映射关系如下：</p>
 <table>
 <thead>
 <tr>
-<th>Claude 模型名</th>
-<th>Display name</th>
-<th>映射到</th>
+<th>Model ID</th>
+<th>Display name（别名映射）</th>
 </tr>
 </thead>
 <tbody><tr>
-<td><code>claude-opus-4-5</code></td>
-<td><code>pro</code></td>
+<td><code>claude-opus-pro</code></td>
 <td><code>deepseek-v4-pro</code></td>
 </tr>
 <tr>
-<td><code>claude-haiku-4-5</code></td>
-<td><code>flash</code></td>
+<td><code>claude-sonnet-flash</code></td>
 <td><code>deepseek-v4-flash</code></td>
 </tr>
 </tbody></table>
-<p>也就是说，Model ID 既可以填 <code>claude-opus-4-5</code>、<code>claude-haiku-4-5</code> 这类 Claude 命名（自动映射），也可以直接填 <code>deepseek-v4-pro</code>、<code>deepseek-v4-flash</code>（显式指定）。两种填法都行，Display name 统一填 <code>pro</code> / <code>flash</code> 方便识别，由于Claude对国产模型的限制，尽量别出现deepseek字样。</p>
+<p>也就是说，Model ID 既可以填 <code>claude-opus-pro</code>、<code>claude-sonnet-flash</code> 这类 Claude 命名（自动映射），也可以直接填 <code>deepseek-v4-pro</code>、<code>deepseek-v4-flash</code>（显式指定）。两种填法都行；Display name 里<strong>增加别名</strong>，把 Model ID 映射到对应的 DeepSeek 模型（<code>claude-opus-pro</code> → <code>deepseek-v4-pro</code>、<code>claude-sonnet-flash</code> → <code>deepseek-v4-flash</code>），这样下拉框里显示的就是 <code>deepseek-v4-pro</code> / <code>deepseek-v4-flash</code>，一眼能认出实际用的是哪个模型。</p>
 <h1 id="七、实测效果"><a href="#七、实测效果" class="headerlink" title="七、实测效果"></a>七、实测效果</h1><p>配置完成后直接开测。DeepSeek V4 Pro 在 Claude Desktop 里跑复杂任务（写代码、分析长文档）的体验比较接近原版 Claude，日常对话、写作完全够用。</p>
 <p>几点实测感受：</p>
 <ul>
@@ -921,7 +918,7 @@ setx CLAUDE_CODE_ATTRIBUTION_HEADER 0<span aria-hidden="true" class="line-number
 </blockquote>
 <h1 id="八、常见问题"><a href="#八、常见问题" class="headerlink" title="八、常见问题"></a>八、常见问题</h1><p><strong>Q：配置后报 401 认证失败？</strong></p>
 <p>A：大概率是 Gateway auth scheme 没选 <code>bearer</code>，检查一下这个字段。</p>
-<p><strong>Q：Model ID 填 <code>claude-opus-4-5</code> 还是 <code>deepseek-v4-pro</code>？</strong></p>
+<p><strong>Q：Model ID 填 <code>claude-opus-pro</code> 还是 <code>deepseek-v4-pro</code>？</strong></p>
 <p>A：两种都行。填 <code>claude-</code> 开头的会走自动映射（见第六节），填 <code>deepseek-</code> 开头的是显式指定，效果等价。</p>
 <p><strong>Q：怎么让模型不读敏感文件？</strong></p>
 <p>A：在 Settings → General → Instructions for Claude 里写入规则（见第五节）：第 2 条禁止读写账号、密码、Token、Key、.env 等敏感信息并自动脱敏，第 5 条要求代码示例用环境变量或占位符不硬编码密钥。从指令层面约束它。</p>
@@ -929,7 +926,7 @@ setx CLAUDE_CODE_ATTRIBUTION_HEADER 0<span aria-hidden="true" class="line-number
 <p>A：开发者模式入口只在较新版本提供，先升级 Claude Desktop 到最新版，再走 Help → Troubleshooting → Enable Developer Mode。</p>
 <h1 id="九、总结"><a href="#九、总结" class="headerlink" title="九、总结"></a>九、总结</h1><ul>
 <li>Claude Desktop 通过开发者模式 + Gateway 方式即可接入 DeepSeek V4，关键三个字段：base URL 填 <code>https://api.deepseek.com/anthropic</code>、API Key 填 <code>sk-</code> 开头的密钥、auth scheme 选 <code>bearer</code>。</li>
-<li>添加模型时，Model ID 填 <code>claude-opus-4-5</code> / <code>claude-haiku-4-5</code>（走自动映射），并打开 Offer 1M-context variant 和 Default to 1M context 两个开关。</li>
+<li>添加模型时，Model ID 填 <code>claude-opus-pro</code> / <code>claude-sonnet-flash</code>（走自动映射），并打开 Offer 1M-context variant 和 Default to 1M context 两个开关。</li>
 <li>用 Instructions for Claude 给模型立好”不碰敏感文件”的规矩，Transcript width 调成 wide，看长代码更舒服。</li>
 <li>官方文档：<a href="https://api-docs.deepseek.com/zh-cn/guides/anthropic_api" target="_blank" rel="noopener">DeepSeek Anthropic API 接入文档</a></li>
 </ul>
