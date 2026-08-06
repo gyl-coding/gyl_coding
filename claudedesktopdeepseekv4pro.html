@@ -876,22 +876,21 @@
 <p>重启后就能在模型列表里看到 DeepSeek 模型并正常对话了。</p>
 <h1 id="五、自定义偏好设置"><a href="#五、自定义偏好设置" class="headerlink" title="五、自定义偏好设置"></a>五、自定义偏好设置</h1><p>接入完成后，建议顺手把几个偏好设置调一下，让使用体验更顺手、也更安全。</p>
 <p><strong>1. 给 Claude 的自定义指令（Instructions for Claude）</strong></p>
-<p>在 <strong>Settings → General → Instructions for Claude</strong> 里，可以给模型写一套”行为准则”。我实际在用的是这七条：</p>
+<p>在 <strong>Settings → General → Instructions for Claude</strong> 里，可以给模型写一套”行为准则”。我实际在用的是这六条：</p>
 <pre class="line-numbers language-text"><code class="language-text">1、信息不足或存在歧义时先澄清，否则直接回答。
 2、禁止读取或输出敏感信息（账号、密码、Token、Key、.env 等），发现疑似敏感内容自动脱敏。
-3、代码修改前说明计划，修改后总结文件、变更、原因和影响。
-4、修改代码后尽量执行测试、编译或检查；未验证必须说明。
-5、代码示例禁止硬编码密钥，使用环境变量或占位符。
-6、不确定信息标注「需核实」，不要编造结果。
-7、不假设不存在的文件、配置或依赖，避免无关重构。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>这七条覆盖了几个关键场景：</p>
+3、代码场景请遵循：修改前说明计划，修改后总结文件、变更、原因和影响；修改代码后尽量执行测试、编译或检查；未验证必须说明、代码示例禁止硬编码密钥，使用环境变量或占位符。
+4、不确定信息标注「需核实」，不要编造结果。
+5、不假设不存在的文件、配置或依赖，避免无关重构。
+6、和你的Q&A、思考、回答、推理过程尽量都用中文。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这六条覆盖了几个关键场景：</p>
 <ul>
 <li>第 1 条：先澄清再回答，避免理解偏差导致的”答非所问”；</li>
 <li>第 2 条：禁止读写敏感信息（账号、密码、Token、Key、.env），发现疑似敏感内容自动脱敏——这是安全底线；</li>
-<li>第 3、4 条：改代码要”先说明计划、改完总结、尽量跑测试”，保证改得透明、可验证；</li>
-<li>第 5 条：代码示例不硬编码密钥，用环境变量或占位符，从源头避免密钥泄露；</li>
-<li>第 6 条：不确定就标注「需核实」，禁止编造结果；</li>
-<li>第 7 条：不假设不存在的文件、配置或依赖，不做无关重构，避免瞎折腾。</li>
+<li>第 3 条：改代码要”先说明计划、改完总结、尽量跑测试、不硬编码密钥”，保证改得透明、可验证、不泄密；</li>
+<li>第 4 条：不确定就标注「需核实」，禁止编造结果；</li>
+<li>第 5 条：不假设不存在的文件、配置或依赖，不做无关重构，避免瞎折腾；</li>
+<li>第 6 条：回答和推理尽量用中文，沟通更顺畅。</li>
 </ul>
 <blockquote>
 <p>小提示：这几条指令在联网场景尤其值得开。如果你像我一样经常让模型读项目文件、翻日志，先立好”不碰敏感文件、不确定不编造”的规矩，能省掉很多不必要的麻烦。</p>
@@ -912,7 +911,7 @@
 <p><strong>Q：Model ID 填 <code>claude-opus-pro</code> 还是 <code>deepseek-v4-pro</code>？</strong></p>
 <p>A：填 <code>claude-opus-pro</code>。Claude Desktop 的第三方推理配置会校验模型名，直接填 <code>deepseek-v4-pro</code> 会被客户端拒绝（报 “is not an Anthropic model”）。填 <code>claude-</code> 开头走的是 DeepSeek 网关的官方映射，见第四节。</p>
 <p><strong>Q：怎么让模型不读敏感文件？</strong></p>
-<p>A：在 Settings → General → Instructions for Claude 里写入规则（见第五节）：第 2 条禁止读写账号、密码、Token、Key、.env 等敏感信息并自动脱敏，第 5 条要求代码示例用环境变量或占位符不硬编码密钥。从指令层面约束它。</p>
+<p>A：在 Settings → General → Instructions for Claude 里写入规则（见第五节）：第 2 条禁止读写账号、密码、Token、Key、.env 等敏感信息并自动脱敏，第 3 条要求代码示例用环境变量或占位符不硬编码密钥。从指令层面约束它。</p>
 <p><strong>Q：找不到 Developer 菜单？</strong></p>
 <p>A：开发者模式入口只在较新版本提供，先升级 Claude Desktop 到最新版，再走 Help → Troubleshooting → Enable Developer Mode。</p>
 <p><strong>Q：用 Claude Code 走第三方网关，响应明显变慢？（CLAUDE_CODE_ATTRIBUTION_HEADER）</strong></p>
@@ -1728,7 +1727,7 @@ setx CLAUDE_CODE_ATTRIBUTION_HEADER 0<span aria-hidden="true" class="line-number
 
             
                 &nbsp; | &nbsp;字数统计:&nbsp;
-                <span class="white-color">31.7k</span> 字
+                <span class="white-color">31.8k</span> 字
             
 
             
