@@ -20,13 +20,13 @@
       
         <tags>
             
-            <tag> 大模型 </tag>
+            <tag> DeepSeek </tag>
             
             <tag> Claude Desktop </tag>
             
-            <tag> DeepSeek </tag>
-            
             <tag> Anthropic </tag>
+            
+            <tag> 大模型 </tag>
             
         </tags>
       
@@ -51,13 +51,13 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> AI编程 </tag>
             
             <tag> 效率 </tag>
             
             <tag> 工作流 </tag>
+            
+            <tag> Java </tag>
             
         </tags>
       
@@ -111,11 +111,11 @@
             
             <tag> Claude Code </tag>
             
+            <tag> AI编程 </tag>
+            
             <tag> Java </tag>
             
             <tag> Spring Boot </tag>
-            
-            <tag> AI编程 </tag>
             
         </tags>
       
@@ -140,13 +140,13 @@
       
         <tags>
             
-            <tag> AI </tag>
-            
             <tag> Agent </tag>
             
-            <tag> Prompt </tag>
+            <tag> AI </tag>
             
             <tag> 大模型 </tag>
+            
+            <tag> Prompt </tag>
             
         </tags>
       
@@ -202,9 +202,9 @@
       
         <tags>
             
-            <tag> AI </tag>
-            
             <tag> Agent </tag>
+            
+            <tag> AI </tag>
             
             <tag> Java </tag>
             
@@ -264,13 +264,13 @@
       
         <tags>
             
-            <tag> AI </tag>
-            
             <tag> Agent </tag>
             
             <tag> 可观测性 </tag>
             
             <tag> Debug </tag>
+            
+            <tag> AI </tag>
             
         </tags>
       

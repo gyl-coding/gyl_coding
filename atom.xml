@@ -41,13 +41,13 @@
       <category term="开发技巧" scheme="https://gyl-coding.github.io/gyl_coding/categories/%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/"/>
     
     
-      <category term="大模型" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
+      <category term="DeepSeek" scheme="https://gyl-coding.github.io/gyl_coding/tags/DeepSeek/"/>
     
       <category term="Claude Desktop" scheme="https://gyl-coding.github.io/gyl_coding/tags/Claude-Desktop/"/>
     
-      <category term="DeepSeek" scheme="https://gyl-coding.github.io/gyl_coding/tags/DeepSeek/"/>
-    
       <category term="Anthropic" scheme="https://gyl-coding.github.io/gyl_coding/tags/Anthropic/"/>
+    
+      <category term="大模型" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
     
   </entry>
   
@@ -76,13 +76,13 @@
       <category term="开发技巧" scheme="https://gyl-coding.github.io/gyl_coding/categories/%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/"/>
     
     
-      <category term="Java" scheme="https://gyl-coding.github.io/gyl_coding/tags/Java/"/>
-    
       <category term="AI编程" scheme="https://gyl-coding.github.io/gyl_coding/tags/AI%E7%BC%96%E7%A8%8B/"/>
     
       <category term="效率" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E6%95%88%E7%8E%87/"/>
     
       <category term="工作流" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81/"/>
+    
+      <category term="Java" scheme="https://gyl-coding.github.io/gyl_coding/tags/Java/"/>
     
   </entry>
   
@@ -144,11 +144,11 @@
     
       <category term="Claude Code" scheme="https://gyl-coding.github.io/gyl_coding/tags/Claude-Code/"/>
     
+      <category term="AI编程" scheme="https://gyl-coding.github.io/gyl_coding/tags/AI%E7%BC%96%E7%A8%8B/"/>
+    
       <category term="Java" scheme="https://gyl-coding.github.io/gyl_coding/tags/Java/"/>
     
       <category term="Spring Boot" scheme="https://gyl-coding.github.io/gyl_coding/tags/Spring-Boot/"/>
-    
-      <category term="AI编程" scheme="https://gyl-coding.github.io/gyl_coding/tags/AI%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
@@ -177,13 +177,13 @@
       <category term="开发技巧" scheme="https://gyl-coding.github.io/gyl_coding/categories/%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/"/>
     
     
-      <category term="AI" scheme="https://gyl-coding.github.io/gyl_coding/tags/AI/"/>
-    
       <category term="Agent" scheme="https://gyl-coding.github.io/gyl_coding/tags/Agent/"/>
     
-      <category term="Prompt" scheme="https://gyl-coding.github.io/gyl_coding/tags/Prompt/"/>
+      <category term="AI" scheme="https://gyl-coding.github.io/gyl_coding/tags/AI/"/>
     
       <category term="大模型" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
+    
+      <category term="Prompt" scheme="https://gyl-coding.github.io/gyl_coding/tags/Prompt/"/>
     
   </entry>
   
@@ -247,9 +247,9 @@
       <category term="AI" scheme="https://gyl-coding.github.io/gyl_coding/categories/AI/"/>
     
     
-      <category term="AI" scheme="https://gyl-coding.github.io/gyl_coding/tags/AI/"/>
-    
       <category term="Agent" scheme="https://gyl-coding.github.io/gyl_coding/tags/Agent/"/>
+    
+      <category term="AI" scheme="https://gyl-coding.github.io/gyl_coding/tags/AI/"/>
     
       <category term="Java" scheme="https://gyl-coding.github.io/gyl_coding/tags/Java/"/>
     
@@ -317,13 +317,13 @@
       <category term="AI" scheme="https://gyl-coding.github.io/gyl_coding/categories/AI/"/>
     
     
-      <category term="AI" scheme="https://gyl-coding.github.io/gyl_coding/tags/AI/"/>
-    
       <category term="Agent" scheme="https://gyl-coding.github.io/gyl_coding/tags/Agent/"/>
     
       <category term="可观测性" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7/"/>
     
       <category term="Debug" scheme="https://gyl-coding.github.io/gyl_coding/tags/Debug/"/>
+    
+      <category term="AI" scheme="https://gyl-coding.github.io/gyl_coding/tags/AI/"/>
     
   </entry>
   
