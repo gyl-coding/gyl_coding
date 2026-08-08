@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gyl-coding.github.io/gyl_coding/sitemap.xml
+Sitemap: https://gyl-coding.github.io/gyl_coding/baidusitemap.xml
