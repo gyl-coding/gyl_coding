@@ -41,13 +41,13 @@
       <category term="开发技巧" scheme="https://gyl-coding.github.io/gyl_coding/categories/%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/"/>
     
     
+      <category term="大模型" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
+    
       <category term="DeepSeek" scheme="https://gyl-coding.github.io/gyl_coding/tags/DeepSeek/"/>
     
       <category term="Claude Desktop" scheme="https://gyl-coding.github.io/gyl_coding/tags/Claude-Desktop/"/>
     
       <category term="Anthropic" scheme="https://gyl-coding.github.io/gyl_coding/tags/Anthropic/"/>
-    
-      <category term="大模型" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
     
   </entry>
   
@@ -76,13 +76,13 @@
       <category term="开发技巧" scheme="https://gyl-coding.github.io/gyl_coding/categories/%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/"/>
     
     
+      <category term="Java" scheme="https://gyl-coding.github.io/gyl_coding/tags/Java/"/>
+    
       <category term="AI编程" scheme="https://gyl-coding.github.io/gyl_coding/tags/AI%E7%BC%96%E7%A8%8B/"/>
     
       <category term="效率" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E6%95%88%E7%8E%87/"/>
     
       <category term="工作流" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81/"/>
-    
-      <category term="Java" scheme="https://gyl-coding.github.io/gyl_coding/tags/Java/"/>
     
   </entry>
   
@@ -144,11 +144,11 @@
     
       <category term="Claude Code" scheme="https://gyl-coding.github.io/gyl_coding/tags/Claude-Code/"/>
     
-      <category term="AI编程" scheme="https://gyl-coding.github.io/gyl_coding/tags/AI%E7%BC%96%E7%A8%8B/"/>
-    
       <category term="Java" scheme="https://gyl-coding.github.io/gyl_coding/tags/Java/"/>
     
       <category term="Spring Boot" scheme="https://gyl-coding.github.io/gyl_coding/tags/Spring-Boot/"/>
+    
+      <category term="AI编程" scheme="https://gyl-coding.github.io/gyl_coding/tags/AI%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
@@ -181,9 +181,9 @@
     
       <category term="AI" scheme="https://gyl-coding.github.io/gyl_coding/tags/AI/"/>
     
-      <category term="大模型" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
-    
       <category term="Prompt" scheme="https://gyl-coding.github.io/gyl_coding/tags/Prompt/"/>
+    
+      <category term="大模型" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
     
   </entry>
   
@@ -509,39 +509,6 @@
   </entry>
   
   <entry>
-    <title>Docker运行Redis容器</title>
-    <link href="https://gyl-coding.github.io/gyl_coding/runredisondocker.html"/>
-    <id>https://gyl-coding.github.io/gyl_coding/runredisondocker.html</id>
-    <published>2022-10-14T06:44:00.000Z</published>
-    <updated>2022-10-13T10:35:00.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;div align=&quot;center&quot;&gt;&lt;h1&gt;Docker运行Redis stack服务&lt;/h1&gt;&lt;/div&gt;
-
-&lt;div align=&quot;middle&quot;&gt;
-    &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="软件安装与配置" scheme="https://gyl-coding.github.io/gyl_coding/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
-    
-    
-      <category term="Docker" scheme="https://gyl-coding.github.io/gyl_coding/tags/Docker/"/>
-    
-      <category term="Redis" scheme="https://gyl-coding.github.io/gyl_coding/tags/Redis/"/>
-    
-      <category term="容器技术" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
     <title>VirtualBox安装MacOS</title>
     <link href="https://gyl-coding.github.io/gyl_coding/virtualboxinstallmacos.html"/>
     <id>https://gyl-coding.github.io/gyl_coding/virtualboxinstallmacos.html</id>
@@ -574,6 +541,39 @@
       <category term="MacOS" scheme="https://gyl-coding.github.io/gyl_coding/tags/MacOS/"/>
     
       <category term="虚拟机" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker运行Redis容器</title>
+    <link href="https://gyl-coding.github.io/gyl_coding/runredisondocker.html"/>
+    <id>https://gyl-coding.github.io/gyl_coding/runredisondocker.html</id>
+    <published>2022-10-14T06:44:00.000Z</published>
+    <updated>2022-10-13T10:35:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;center&quot;&gt;&lt;h1&gt;Docker运行Redis stack服务&lt;/h1&gt;&lt;/div&gt;
+
+&lt;div align=&quot;middle&quot;&gt;
+    &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="软件安装与配置" scheme="https://gyl-coding.github.io/gyl_coding/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
+    
+    
+      <category term="Docker" scheme="https://gyl-coding.github.io/gyl_coding/tags/Docker/"/>
+    
+      <category term="Redis" scheme="https://gyl-coding.github.io/gyl_coding/tags/Redis/"/>
+    
+      <category term="容器技术" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   

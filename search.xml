@@ -20,13 +20,13 @@
       
         <tags>
             
+            <tag> 大模型 </tag>
+            
             <tag> DeepSeek </tag>
             
             <tag> Claude Desktop </tag>
             
             <tag> Anthropic </tag>
-            
-            <tag> 大模型 </tag>
             
         </tags>
       
@@ -51,13 +51,13 @@
       
         <tags>
             
+            <tag> Java </tag>
+            
             <tag> AI编程 </tag>
             
             <tag> 效率 </tag>
             
             <tag> 工作流 </tag>
-            
-            <tag> Java </tag>
             
         </tags>
       
@@ -111,11 +111,11 @@
             
             <tag> Claude Code </tag>
             
-            <tag> AI编程 </tag>
-            
             <tag> Java </tag>
             
             <tag> Spring Boot </tag>
+            
+            <tag> AI编程 </tag>
             
         </tags>
       
@@ -144,9 +144,9 @@
             
             <tag> AI </tag>
             
-            <tag> 大模型 </tag>
-            
             <tag> Prompt </tag>
+            
+            <tag> 大模型 </tag>
             
         </tags>
       
@@ -439,35 +439,6 @@
     
     
     <entry>
-      <title>Docker运行Redis容器</title>
-      <link href="/gyl_coding/runredisondocker.html"/>
-      <url>/gyl_coding/runredisondocker.html</url>
-      
-        <content type="html"><![CDATA[<div align="center"><h1>Docker运行Redis stack服务</h1></div><div align="middle">    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="86" src="//music.163.com/outchain/player?type=2&amp;id=1988564487&amp;auto=0&amp;height=66">    </iframe></div><h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><ul><li><h2 id="Redis-stack"><a href="#Redis-stack" class="headerlink" title="Redis stack"></a><a href="https://redis.io/docs/stack/" target="_blank" rel="noopener">Redis stack</a></h2><p>Redis Stack 是一组软件套件，它主要由三部分组成。</p><ul><li>一部分是 Redis Stack Server</li><li>一部分是可视化工具<a href="https://redis.io/docs/stack/insight/" target="_blank" rel="noopener">RedisInsight</a></li><li>一部分是 Redis Stack 客户端<a href="https://redis.io/docs/clients/#java" target="_blank" rel="noopener">Clients</a></li></ul><p>其中 Redis Stack Server 由 <a href="https://redis.io/docs/about/users/" target="_blank" rel="noopener">Redis</a>，五种功能模块<a href="https://redis.io/docs/stack/json" target="_blank" rel="noopener">RedisJSON</a>, <a href="https://redis.io/docs/stack/search" target="_blank" rel="noopener">RediSearch</a>, <a href="https://redis.io/docs/stack/graph" target="_blank" rel="noopener">RedisGraph</a>, <a href="https://redis.io/docs/stack/timeseries" target="_blank" rel="noopener">RedisTimeSeries</a>和 <a href="https://redis.io/docs/stack/bloom" target="_blank" rel="noopener">RedisBloom</a> 组成。</p></li><li><h2 id="Redis-Redis-stack镜像"><a href="#Redis-Redis-stack镜像" class="headerlink" title="Redis/Redis-stack镜像"></a><a href="https://hub.docker.com/r/redis/redis-stack" target="_blank" rel="noopener">Redis/Redis-stack镜像</a></h2><p>包含可视化工具<a href="https://redis.io/docs/stack/insight/" target="_blank" rel="noopener">RedisInsight</a>及<a href="https://redis.io/docs/stack/json" target="_blank" rel="noopener">RedisJSON</a>, <a href="https://redis.io/docs/stack/search" target="_blank" rel="noopener">RediSearch</a>, <a href="https://redis.io/docs/stack/graph" target="_blank" rel="noopener">RedisGraph</a>, <a href="https://redis.io/docs/stack/timeseries" target="_blank" rel="noopener">RedisTimeSeries</a>和 <a href="https://redis.io/docs/stack/bloom" target="_blank" rel="noopener">RedisBloom</a>模块的Redis服务,更适合于开发测试环境</p></li></ul><ul><li><h2 id="Redis-Redis-stack-server镜像"><a href="#Redis-Redis-stack-server镜像" class="headerlink" title="Redis/Redis-stack-server镜像"></a><a href="redis/redis-stack-server">Redis/Redis-stack-server镜像</a></h2><p>包含<a href="https://redis.io/docs/stack/json" target="_blank" rel="noopener">RedisJSON</a>, <a href="https://redis.io/docs/stack/search" target="_blank" rel="noopener">RediSearch</a>, <a href="https://redis.io/docs/stack/graph" target="_blank" rel="noopener">RedisGraph</a>, <a href="https://redis.io/docs/stack/timeseries" target="_blank" rel="noopener">RedisTimeSeries</a>和 <a href="https://redis.io/docs/stack/bloom" target="_blank" rel="noopener">RedisBloom</a>模块的Redis服务,更适合于生产环境</p></li></ul><h1 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h1><blockquote><p>进入DockerHub搜索<a href="https://hub.docker.com/search?q=redis" target="_blank" rel="noopener">Redis镜像</a>,到目前为止(22/10/24)最新稳定版为: 6.2.4-v3 , 7.0及以上为RC版本</p></blockquote><ol><li><h4 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h4><pre class="line-numbers language-shell"><code class="language-shell">$ docker pull redis/redis-stack:6.2.4-v3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li><h4 id="默认启动"><a href="#默认启动" class="headerlink" title="默认启动"></a>默认启动</h4><ul><li><h3 id="redis-redis-stack-server"><a href="#redis-redis-stack-server" class="headerlink" title="redis/redis-stack-server"></a>redis/redis-stack-server</h3><pre class="line-numbers language-shell"><code class="language-shell">$ docker run -d --name redis-stack-server -p 6379:6379 redis/redis-stack-server:6.2.4-v3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li><h3 id="redis-redis-stack"><a href="#redis-redis-stack" class="headerlink" title="redis/redis-stack"></a>redis/redis-stack</h3><p>比redis/redis-stack-server多一个端口8001,为<code>RedisInsight</code>端口</p><pre class="line-numbers language-shell"><code class="language-shell">$ docker run -d --name redis-stack -p 6379:6379 -p 8001:8001 redis/redis-stack:6.2.4-v3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li></ul></li><li><h4 id="自定义启动"><a href="#自定义启动" class="headerlink" title="自定义启动"></a>自定义启动</h4><h5 id="目录挂载"><a href="#目录挂载" class="headerlink" title="目录挂载"></a>目录挂载</h5><p>将所有数据保存在本地目录local-data中</p><pre class="line-numbers language-shell"><code class="language-shell">$ docker run -v /local-data/:/data redis/redis-stack:6.2.4-v3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h5 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h5><p>将端口绑定到宿主机上</p><pre class="line-numbers language-shell"><code class="language-shell">$ docker run -p 16379:6379 -p 18001:8001 redis/redis-stack:6.2.4-v3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h5 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h5><p>使用本地用户目录(可更改)下的<code>pwd/local-redis-stack.conf</code>配置文件启动</p><pre class="line-numbers language-shell"><code class="language-shell">$ docker run -v `pwd`/local-redis-stack.conf:/redis-stack.conf -p 16379:6379 -p 18001:8001 redis/redis-stack:6.2.4-v3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h5 id="Environment-variables"><a href="#Environment-variables" class="headerlink" title="Environment variables"></a>Environment variables</h5><ul><li><p><code>REDIS_ARGS</code>: <a href="https://www.runoob.com/redis/redis-conf.html" target="_blank" rel="noopener">Redis 配置</a></p></li><li><p><code>REDISEARCH_ARGS</code>: RediSearch 配置</p></li><li><p><code>REDISJSON_ARGS</code>: RedisJSON 配置</p></li><li><p><code>REDISGRAPH_ARGS</code>: RedisGraph 配置</p></li><li><p><code>REDISTIMESERIES_ARGS</code>: RedisTimeSeries 配置</p></li><li><p><code>REDISBLOOM_ARGS</code>: RedisBloom 配置</p><p>例如设置Redis连接密码:</p><pre class="line-numbers language-shell"><code class="language-shell">$ docker run -e REDIS_ARGS="--requirepass root" redis/redis-stack:6.2.4-v3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li></ul><h5 id="自定义启动-1"><a href="#自定义启动-1" class="headerlink" title="自定义启动"></a>自定义启动</h5><p>根据如上教程自定义组合配置命令启动即可</p><pre class="line-numbers language-shell"><code class="language-shell">$ docker run \    -p 16379:6379 \    -p 18001:8001 \    -v /root/docker/redis/data/:/data \    -v /root/docker/redis/config/redis-stack.conf:/redis-stack.conf \    -e REDIS_ARGS="--requirepass root" \    --restart=always \    -d redis/redis-stack:6.2.4-v3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>RedisInsight访问: <a href="http://ip:18001/" target="_blank" rel="noopener">http://ip:18001/</a></p></li><li><h4 id="连接-redis-cli"><a href="#连接-redis-cli" class="headerlink" title="连接 redis-cli"></a>连接 redis-cli</h4><pre class="line-numbers language-shell"><code class="language-shell">$ docker exec -it redis-stack redis-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li></ol><h1 id="使用Client连接Redis"><a href="#使用Client连接Redis" class="headerlink" title="使用Client连接Redis"></a>使用Client连接Redis</h1><h5 id="SpringBoot"><a href="#SpringBoot" class="headerlink" title="SpringBoot"></a>SpringBoot</h5><pre class="line-numbers language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>redis.clients<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>jedis<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter-data-redis<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h5 id="待续…"><a href="#待续…" class="headerlink" title="待续…"></a>待续…</h5><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      <categories>
-          
-          <category> 软件安装与配置 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Docker </tag>
-            
-            <tag> Redis </tag>
-            
-            <tag> 容器技术 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>VirtualBox安装MacOS</title>
       <link href="/gyl_coding/virtualboxinstallmacos.html"/>
       <url>/gyl_coding/virtualboxinstallmacos.html</url>
@@ -489,6 +460,35 @@
             <tag> MacOS </tag>
             
             <tag> 虚拟机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Docker运行Redis容器</title>
+      <link href="/gyl_coding/runredisondocker.html"/>
+      <url>/gyl_coding/runredisondocker.html</url>
+      
+        <content type="html"><![CDATA[<div align="center"><h1>Docker运行Redis stack服务</h1></div><div align="middle">    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="86" src="//music.163.com/outchain/player?type=2&amp;id=1988564487&amp;auto=0&amp;height=66">    </iframe></div><h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><ul><li><h2 id="Redis-stack"><a href="#Redis-stack" class="headerlink" title="Redis stack"></a><a href="https://redis.io/docs/stack/" target="_blank" rel="noopener">Redis stack</a></h2><p>Redis Stack 是一组软件套件，它主要由三部分组成。</p><ul><li>一部分是 Redis Stack Server</li><li>一部分是可视化工具<a href="https://redis.io/docs/stack/insight/" target="_blank" rel="noopener">RedisInsight</a></li><li>一部分是 Redis Stack 客户端<a href="https://redis.io/docs/clients/#java" target="_blank" rel="noopener">Clients</a></li></ul><p>其中 Redis Stack Server 由 <a href="https://redis.io/docs/about/users/" target="_blank" rel="noopener">Redis</a>，五种功能模块<a href="https://redis.io/docs/stack/json" target="_blank" rel="noopener">RedisJSON</a>, <a href="https://redis.io/docs/stack/search" target="_blank" rel="noopener">RediSearch</a>, <a href="https://redis.io/docs/stack/graph" target="_blank" rel="noopener">RedisGraph</a>, <a href="https://redis.io/docs/stack/timeseries" target="_blank" rel="noopener">RedisTimeSeries</a>和 <a href="https://redis.io/docs/stack/bloom" target="_blank" rel="noopener">RedisBloom</a> 组成。</p></li><li><h2 id="Redis-Redis-stack镜像"><a href="#Redis-Redis-stack镜像" class="headerlink" title="Redis/Redis-stack镜像"></a><a href="https://hub.docker.com/r/redis/redis-stack" target="_blank" rel="noopener">Redis/Redis-stack镜像</a></h2><p>包含可视化工具<a href="https://redis.io/docs/stack/insight/" target="_blank" rel="noopener">RedisInsight</a>及<a href="https://redis.io/docs/stack/json" target="_blank" rel="noopener">RedisJSON</a>, <a href="https://redis.io/docs/stack/search" target="_blank" rel="noopener">RediSearch</a>, <a href="https://redis.io/docs/stack/graph" target="_blank" rel="noopener">RedisGraph</a>, <a href="https://redis.io/docs/stack/timeseries" target="_blank" rel="noopener">RedisTimeSeries</a>和 <a href="https://redis.io/docs/stack/bloom" target="_blank" rel="noopener">RedisBloom</a>模块的Redis服务,更适合于开发测试环境</p></li></ul><ul><li><h2 id="Redis-Redis-stack-server镜像"><a href="#Redis-Redis-stack-server镜像" class="headerlink" title="Redis/Redis-stack-server镜像"></a><a href="redis/redis-stack-server">Redis/Redis-stack-server镜像</a></h2><p>包含<a href="https://redis.io/docs/stack/json" target="_blank" rel="noopener">RedisJSON</a>, <a href="https://redis.io/docs/stack/search" target="_blank" rel="noopener">RediSearch</a>, <a href="https://redis.io/docs/stack/graph" target="_blank" rel="noopener">RedisGraph</a>, <a href="https://redis.io/docs/stack/timeseries" target="_blank" rel="noopener">RedisTimeSeries</a>和 <a href="https://redis.io/docs/stack/bloom" target="_blank" rel="noopener">RedisBloom</a>模块的Redis服务,更适合于生产环境</p></li></ul><h1 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h1><blockquote><p>进入DockerHub搜索<a href="https://hub.docker.com/search?q=redis" target="_blank" rel="noopener">Redis镜像</a>,到目前为止(22/10/24)最新稳定版为: 6.2.4-v3 , 7.0及以上为RC版本</p></blockquote><ol><li><h4 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h4><pre class="line-numbers language-shell"><code class="language-shell">$ docker pull redis/redis-stack:6.2.4-v3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li><h4 id="默认启动"><a href="#默认启动" class="headerlink" title="默认启动"></a>默认启动</h4><ul><li><h3 id="redis-redis-stack-server"><a href="#redis-redis-stack-server" class="headerlink" title="redis/redis-stack-server"></a>redis/redis-stack-server</h3><pre class="line-numbers language-shell"><code class="language-shell">$ docker run -d --name redis-stack-server -p 6379:6379 redis/redis-stack-server:6.2.4-v3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li><h3 id="redis-redis-stack"><a href="#redis-redis-stack" class="headerlink" title="redis/redis-stack"></a>redis/redis-stack</h3><p>比redis/redis-stack-server多一个端口8001,为<code>RedisInsight</code>端口</p><pre class="line-numbers language-shell"><code class="language-shell">$ docker run -d --name redis-stack -p 6379:6379 -p 8001:8001 redis/redis-stack:6.2.4-v3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li></ul></li><li><h4 id="自定义启动"><a href="#自定义启动" class="headerlink" title="自定义启动"></a>自定义启动</h4><h5 id="目录挂载"><a href="#目录挂载" class="headerlink" title="目录挂载"></a>目录挂载</h5><p>将所有数据保存在本地目录local-data中</p><pre class="line-numbers language-shell"><code class="language-shell">$ docker run -v /local-data/:/data redis/redis-stack:6.2.4-v3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h5 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h5><p>将端口绑定到宿主机上</p><pre class="line-numbers language-shell"><code class="language-shell">$ docker run -p 16379:6379 -p 18001:8001 redis/redis-stack:6.2.4-v3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h5 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h5><p>使用本地用户目录(可更改)下的<code>pwd/local-redis-stack.conf</code>配置文件启动</p><pre class="line-numbers language-shell"><code class="language-shell">$ docker run -v `pwd`/local-redis-stack.conf:/redis-stack.conf -p 16379:6379 -p 18001:8001 redis/redis-stack:6.2.4-v3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h5 id="Environment-variables"><a href="#Environment-variables" class="headerlink" title="Environment variables"></a>Environment variables</h5><ul><li><p><code>REDIS_ARGS</code>: <a href="https://www.runoob.com/redis/redis-conf.html" target="_blank" rel="noopener">Redis 配置</a></p></li><li><p><code>REDISEARCH_ARGS</code>: RediSearch 配置</p></li><li><p><code>REDISJSON_ARGS</code>: RedisJSON 配置</p></li><li><p><code>REDISGRAPH_ARGS</code>: RedisGraph 配置</p></li><li><p><code>REDISTIMESERIES_ARGS</code>: RedisTimeSeries 配置</p></li><li><p><code>REDISBLOOM_ARGS</code>: RedisBloom 配置</p><p>例如设置Redis连接密码:</p><pre class="line-numbers language-shell"><code class="language-shell">$ docker run -e REDIS_ARGS="--requirepass root" redis/redis-stack:6.2.4-v3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li></ul><h5 id="自定义启动-1"><a href="#自定义启动-1" class="headerlink" title="自定义启动"></a>自定义启动</h5><p>根据如上教程自定义组合配置命令启动即可</p><pre class="line-numbers language-shell"><code class="language-shell">$ docker run \    -p 16379:6379 \    -p 18001:8001 \    -v /root/docker/redis/data/:/data \    -v /root/docker/redis/config/redis-stack.conf:/redis-stack.conf \    -e REDIS_ARGS="--requirepass root" \    --restart=always \    -d redis/redis-stack:6.2.4-v3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>RedisInsight访问: <a href="http://ip:18001/" target="_blank" rel="noopener">http://ip:18001/</a></p></li><li><h4 id="连接-redis-cli"><a href="#连接-redis-cli" class="headerlink" title="连接 redis-cli"></a>连接 redis-cli</h4><pre class="line-numbers language-shell"><code class="language-shell">$ docker exec -it redis-stack redis-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li></ol><h1 id="使用Client连接Redis"><a href="#使用Client连接Redis" class="headerlink" title="使用Client连接Redis"></a>使用Client连接Redis</h1><h5 id="SpringBoot"><a href="#SpringBoot" class="headerlink" title="SpringBoot"></a>SpringBoot</h5><pre class="line-numbers language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>redis.clients<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>jedis<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter-data-redis<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h5 id="待续…"><a href="#待续…" class="headerlink" title="待续…"></a>待续…</h5><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 软件安装与配置 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Docker </tag>
+            
+            <tag> Redis </tag>
+            
+            <tag> 容器技术 </tag>
             
         </tags>
       
