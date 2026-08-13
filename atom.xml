@@ -43,9 +43,9 @@
     
       <category term="大模型" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
     
-      <category term="DeepSeek" scheme="https://gyl-coding.github.io/gyl_coding/tags/DeepSeek/"/>
-    
       <category term="Claude Desktop" scheme="https://gyl-coding.github.io/gyl_coding/tags/Claude-Desktop/"/>
+    
+      <category term="DeepSeek" scheme="https://gyl-coding.github.io/gyl_coding/tags/DeepSeek/"/>
     
       <category term="Anthropic" scheme="https://gyl-coding.github.io/gyl_coding/tags/Anthropic/"/>
     
@@ -177,9 +177,9 @@
       <category term="开发技巧" scheme="https://gyl-coding.github.io/gyl_coding/categories/%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/"/>
     
     
-      <category term="Agent" scheme="https://gyl-coding.github.io/gyl_coding/tags/Agent/"/>
-    
       <category term="AI" scheme="https://gyl-coding.github.io/gyl_coding/tags/AI/"/>
+    
+      <category term="Agent" scheme="https://gyl-coding.github.io/gyl_coding/tags/Agent/"/>
     
       <category term="Prompt" scheme="https://gyl-coding.github.io/gyl_coding/tags/Prompt/"/>
     
@@ -280,9 +280,9 @@
       <category term="AI" scheme="https://gyl-coding.github.io/gyl_coding/categories/AI/"/>
     
     
-      <category term="Agent" scheme="https://gyl-coding.github.io/gyl_coding/tags/Agent/"/>
-    
       <category term="AI" scheme="https://gyl-coding.github.io/gyl_coding/tags/AI/"/>
+    
+      <category term="Agent" scheme="https://gyl-coding.github.io/gyl_coding/tags/Agent/"/>
     
       <category term="Java" scheme="https://gyl-coding.github.io/gyl_coding/tags/Java/"/>
     
@@ -350,13 +350,13 @@
       <category term="AI" scheme="https://gyl-coding.github.io/gyl_coding/categories/AI/"/>
     
     
+      <category term="AI" scheme="https://gyl-coding.github.io/gyl_coding/tags/AI/"/>
+    
       <category term="Agent" scheme="https://gyl-coding.github.io/gyl_coding/tags/Agent/"/>
     
       <category term="可观测性" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7/"/>
     
       <category term="Debug" scheme="https://gyl-coding.github.io/gyl_coding/tags/Debug/"/>
-    
-      <category term="AI" scheme="https://gyl-coding.github.io/gyl_coding/tags/AI/"/>
     
   </entry>
   
@@ -611,37 +611,6 @@
   </entry>
   
   <entry>
-    <title>Mysql丢失数据的场景</title>
-    <link href="https://gyl-coding.github.io/gyl_coding/mysqldataloss.html"/>
-    <id>https://gyl-coding.github.io/gyl_coding/mysqldataloss.html</id>
-    <published>2022-10-14T06:44:00.000Z</published>
-    <updated>2022-10-13T10:35:00.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;div align=&quot;center&quot;&gt;&lt;h1&gt;Mysql丢失数据的场景&lt;/h1&gt;&lt;/div&gt;
-
-&lt;div align=&quot;middle&quot;&gt;
-    &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="技术总结" scheme="https://gyl-coding.github.io/gyl_coding/categories/%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/"/>
-    
-    
-      <category term="mysql" scheme="https://gyl-coding.github.io/gyl_coding/tags/mysql/"/>
-    
-      <category term="面试题" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
     <title>常见开发技巧</title>
     <link href="https://gyl-coding.github.io/gyl_coding/developskill.html"/>
     <id>https://gyl-coding.github.io/gyl_coding/developskill.html</id>
@@ -674,6 +643,37 @@
       <category term="Spring" scheme="https://gyl-coding.github.io/gyl_coding/tags/Spring/"/>
     
       <category term="Windows" scheme="https://gyl-coding.github.io/gyl_coding/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mysql丢失数据的场景</title>
+    <link href="https://gyl-coding.github.io/gyl_coding/mysqldataloss.html"/>
+    <id>https://gyl-coding.github.io/gyl_coding/mysqldataloss.html</id>
+    <published>2022-10-14T06:44:00.000Z</published>
+    <updated>2022-10-13T10:35:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;center&quot;&gt;&lt;h1&gt;Mysql丢失数据的场景&lt;/h1&gt;&lt;/div&gt;
+
+&lt;div align=&quot;middle&quot;&gt;
+    &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="技术总结" scheme="https://gyl-coding.github.io/gyl_coding/categories/%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="mysql" scheme="https://gyl-coding.github.io/gyl_coding/tags/mysql/"/>
+    
+      <category term="面试题" scheme="https://gyl-coding.github.io/gyl_coding/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
   </entry>
   
